@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="-5 -10 235 235"
+   id="svg8"
+   width="235"
+   height="235"
+   sodipodi:docname="kami2_ok.svg"
+   inkscape:export-filename="/home/george/_Work_tmp/_Kami/logo/kami2.png"
+   inkscape:export-xdpi="261.44681"
+   inkscape:export-ydpi="261.44681"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="2.4649812"
+     inkscape:cx="20.731445"
+     inkscape:cy="114.73404"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs12" />
+  <g
+     id="g836"
+     transform="translate(22.758435)">
+    <g
+       aria-label="k"
+       transform="matrix(4.9424256,0,0,4.2255358,-197.14884,-111.85565)"
+       id="g888"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.0601px;line-height:1.25;font-family:'Inria Sans';-inkscape-font-specification:'Inria Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#182c4f;fill-opacity:1;stroke:none;stroke-width:1.6265">
+      <path
+         d="m 72.585866,69.390452 -8.968685,-14.75437 -5.279876,3.637086 V 69.390452 H 53.829822 V 24.104789 h 4.507483 V 52.540324 C 64.633241,48.494595 69.260494,43.689868 72.578256,36.39155 l 4.609786,0.05105 c -2.238403,6.340901 -6.544173,11.826605 -10.500528,15.683842 l 10.500528,17.26401 z"
+         style="fill:#182c4f;fill-opacity:1;stroke-width:1.6265"
+         id="path886" />
+    </g>
+    <path
+       id="path1048"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:22.9666;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+       d="M 29.970789,-2.6406753 C 10.795396,-2.6406753 -5,13.154719 -5,32.330113 V 189.35949 c 0,19.17539 15.795391,34.97079 34.970789,34.97079 H 149.52126 c 18.33828,0 33.54954,-14.45604 34.84583,-32.48945 h -23.07286 c -1.08051,5.57527 -5.77994,9.52369 -11.77297,9.52369 H 29.970789 c -6.849169,0 -12.005031,-5.15586 -12.005031,-12.00503 V 32.330113 c 0,-6.849169 5.155862,-12.00503 12.005031,-12.00503 H 58.845341 V -2.6406753 Z m 71.262581,0 V 20.325083 h 48.28789 c 6.76283,0 11.85045,5.034976 11.97826,11.755113 h 22.98361 C 184.34517,13.018865 168.61241,-2.6406753 149.52126,-2.6406753 Z" />
+  </g>
+</svg>
