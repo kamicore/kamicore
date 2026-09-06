@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "3b2d0e2f-12ae-4d3f-8a45-b9fc0fb71959",
+      "name": "Media",
+      "title": "Media",
+      "description": "Manage public media files.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "media",
+    "version": "0.2.0",
+    "dependencies": [],
+    "config": {
+      "handlers": {
+        "view": {
+          "title": "View",
+          "actions": {
+            "browser": {
+              "title": "Media browser"
+            },
+            "listFiles": {
+              "title": "Browse media files"
+            }
+          },
+          "default_action": "browser"
+        },
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "upload": {
+              "title": "Upload media files"
+            },
+            "createFolder": {
+              "title": "Create media folder"
+            },
+            "rename": {
+              "title": "Rename media item"
+            },
+            "move": {
+              "title": "Move media item"
+            },
+            "delete": {
+              "title": "Delete media item"
+            }
+          },
+          "default_action": "upload"
+        }
+      },
+      "default_handler": "view",
+      "default_language": "en"
+    },
+    "settings": {
+      "allowed_extensions": {
+        "title": "Allowed file extensions",
+        "description": "Comma-separated list of file extensions accepted by Media. Executable, server-side and active web content remains blocked by Media security policy even if added here.",
+        "type": "string",
+        "default": "jpg,jpeg,png,webp,avif,gif,pdf,doc,docx,xls,xlsx,ppt,pptx,odt,ods,odp,txt,csv,rtf,mp3,ogg,wav,m4a,mp4,webm,mov,zip",
+        "global": 1
+      },
+      "max_upload_size": {
+        "title": "Maximum upload size (MB)",
+        "description": "Maximum size of one uploaded file in MB. PHP/web-server limits still apply. If upload_max_filesize, post_max_size or another server limit is lower, ask the server administrator to change it; Media does not use chunked or streaming uploads.",
+        "type": "integer",
+        "default": 50,
+        "global": 1
+      }
+    },
+    "min_kami_version": "1.0.0"
+  }
+}

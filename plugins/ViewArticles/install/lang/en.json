@@ -1,0 +1,66 @@
+{
+  "plugin": {
+    "title": "Article Viewer",
+    "description": "Display article lists and individual articles on the front end."
+  },
+  "settings": {
+    "result_page": {
+      "title": "Search and tag results page",
+      "description": "Page used to display an article list."
+    },
+    "article_page": {
+      "title": "Single article page",
+      "description": "Page used to display an individual article."
+    },
+    "search_plugin": {
+      "title": "Search and filter plugin",
+      "description": "Plugin that provides filters and search results."
+    }
+  },
+  "handlers": {
+    "view": {
+      "title": "Display articles",
+      "actions": {
+        "list": {
+          "title": "Article list"
+        },
+        "view": {
+          "title": "Single article"
+        }
+      }
+    },
+    "manage": {
+      "title": "Manage articles",
+      "actions": {
+        "config": {
+          "title": "Article settings"
+        },
+        "list": {
+          "title": "List articles"
+        },
+        "edit": {
+          "title": "Edit article"
+        },
+        "save": {
+          "title": "Save article"
+        },
+        "delete": {
+          "title": "Delete article"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "articles": "Articles",
+    "latest_articles": "Latest articles",
+    "read_more": "Read more",
+    "published_at": "Published",
+    "updated_at": "Updated",
+    "authors": "Authors",
+    "tags": "Tags",
+    "no_articles": "No articles found.",
+    "back_to_articles": "Back to articles",
+    "items_per_page": "Items per page",
+    "all": "All"
+  }
+}

@@ -1,0 +1,1040 @@
+{
+  "field_types": [
+    {
+      "name": "text",
+      "parent": null,
+      "title": {
+        "uk": "Текст",
+        "en": "Text"
+      },
+      "description": {
+        "uk": "Базовий кореневий тип для текстових значень.",
+        "en": "Base root type for textual values."
+      },
+      "settings": {
+        "input": {},
+        "output": {},
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "string"
+          ]
+        },
+        "storage": {
+          "normalizer": "string"
+        },
+        "parameters": {
+          "placeholder": {
+            "type": "string",
+            "title": "field_parameter_placeholder",
+            "description": "field_parameter_placeholder_help"
+          },
+          "min_length": {
+            "type": "integer",
+            "title": "field_parameter_min_length",
+            "description": "field_parameter_min_length_help",
+            "attributes": {
+              "min": 0
+            }
+          },
+          "max_length": {
+            "type": "integer",
+            "title": "field_parameter_max_length",
+            "description": "field_parameter_max_length_help",
+            "attributes": {
+              "min": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "string",
+      "parent": "text",
+      "title": {
+        "uk": "Рядок",
+        "en": "String"
+      },
+      "description": {
+        "uk": "Короткий однорядковий текст без складного форматування.",
+        "en": "Short single-line plain text value without complex formatting."
+      },
+      "settings": {
+        "input": {
+          "template": "text_input"
+        },
+        "output": {
+          "template": "plain_text"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "string"
+          ]
+        },
+        "storage": {
+          "normalizer": "string"
+        }
+      }
+    },
+    {
+      "name": "select",
+      "parent": "string",
+      "title": {
+        "uk": "Випадаючий список",
+        "en": "Select"
+      },
+      "description": {
+        "uk": "Рядкове поле для вибору одного значення зі списку варіантів. Значення option може бути не лише числовим.",
+        "en": "String-based field for selecting one value from a list of options. Option values are not limited to numbers."
+      },
+      "settings": {
+        "input": {
+          "renderer": "select_input",
+          "template": "select_input"
+        },
+        "output": {
+          "template": "plain_text"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "string"
+          ]
+        },
+        "storage": {
+          "normalizer": "string"
+        },
+        "functions": {
+          "edit": "buildSelect"
+        },
+        "templates": {
+          "edit": "form-select"
+        },
+        "parameters": {
+          "options": {
+            "type": "textarea",
+            "format": "json",
+            "title": "field_parameter_options",
+            "description": "field_parameter_options_help",
+            "default": []
+          }
+        }
+      }
+    },
+    {
+      "name": "email",
+      "parent": "string",
+      "title": {
+        "uk": "Email",
+        "en": "Email"
+      },
+      "description": {
+        "uk": "Текстове поле для адрес електронної пошти.",
+        "en": "Text field intended for email addresses."
+      },
+      "settings": {
+        "input": {
+          "template": "email_input"
+        },
+        "output": {
+          "template": "plain_text"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "string",
+            "email"
+          ]
+        },
+        "storage": {
+          "normalizer": "string"
+        }
+      }
+    },
+    {
+      "name": "url",
+      "parent": "string",
+      "title": {
+        "uk": "URL",
+        "en": "URL"
+      },
+      "description": {
+        "uk": "Текстове поле для веб-адрес і посилань.",
+        "en": "Text field intended for web addresses and links."
+      },
+      "settings": {
+        "input": {
+          "template": "url_input"
+        },
+        "output": {
+          "template": "link_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "string",
+            "url"
+          ]
+        },
+        "storage": {
+          "normalizer": "string"
+        }
+      }
+    },
+    {
+      "name": "slug",
+      "parent": "string",
+      "title": {
+        "uk": "Slug",
+        "en": "Slug"
+      },
+      "description": {
+        "uk": "Короткий текстовий ідентифікатор для URL, ключів або системних назв.",
+        "en": "Short textual identifier for URLs, keys, or system names."
+      },
+      "settings": {
+        "input": {
+          "template": "text_input"
+        },
+        "output": {
+          "template": "plain_text"
+        },
+        "sanitize": {
+          "handler": "slug"
+        },
+        "validation": {
+          "rules": [
+            "string",
+            "slug"
+          ]
+        },
+        "storage": {
+          "normalizer": "string"
+        },
+        "parameters": {
+          "rows": {
+            "type": "integer",
+            "title": "field_parameter_rows",
+            "description": "field_parameter_rows_help",
+            "default": 6,
+            "attributes": {
+              "min": 2,
+              "max": 100
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "textarea",
+      "parent": "text",
+      "title": {
+        "uk": "Багаторядковий текст",
+        "en": "Multiline text"
+      },
+      "description": {
+        "uk": "Текстове поле для довших значень із кількома рядками без складного форматування.",
+        "en": "Text field for longer plain-text values containing multiple lines."
+      },
+      "settings": {
+        "input": {
+          "template": "textarea"
+        },
+        "output": {
+          "template": "plain_text"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "string"
+          ]
+        },
+        "storage": {
+          "normalizer": "string"
+        }
+      }
+    },
+    {
+      "name": "richtext",
+      "parent": "text",
+      "title": {
+        "uk": "Форматований текст",
+        "en": "Rich text"
+      },
+      "description": {
+        "uk": "Текстове поле для вмісту з форматуванням.",
+        "en": "Text field for formatted content."
+      },
+      "settings": {
+        "input": {
+          "renderer": "richtext_input",
+          "template": "textarea"
+        },
+        "output": {
+          "renderer": "richtext_output",
+          "template": "richtext_output"
+        },
+        "sanitize": {
+          "handler": "html_basic"
+        },
+        "validation": {
+          "rules": [
+            "string"
+          ]
+        },
+        "storage": {
+          "normalizer": "string"
+        }
+      }
+    },
+    {
+      "name": "number",
+      "parent": null,
+      "title": {
+        "uk": "Число",
+        "en": "Number"
+      },
+      "description": {
+        "uk": "Базовий кореневий тип для числових значень.",
+        "en": "Base root type for numeric values."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "numeric"
+          ]
+        },
+        "storage": {
+          "normalizer": "number"
+        },
+        "parameters": {
+          "min": {
+            "type": "decimal",
+            "title": "field_parameter_min",
+            "description": "field_parameter_min_help"
+          },
+          "max": {
+            "type": "decimal",
+            "title": "field_parameter_max",
+            "description": "field_parameter_max_help"
+          },
+          "step": {
+            "type": "decimal",
+            "title": "field_parameter_step",
+            "description": "field_parameter_step_help",
+            "attributes": {
+              "min": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "integer",
+      "parent": "number",
+      "title": {
+        "uk": "Ціле число",
+        "en": "Integer"
+      },
+      "description": {
+        "uk": "Числове поле для цілих значень без дробової частини.",
+        "en": "Numeric field for whole numbers without a fractional part."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "integer"
+          ]
+        },
+        "storage": {
+          "normalizer": "integer"
+        },
+        "parameters": {
+          "step": {
+            "type": "integer",
+            "default": 1,
+            "attributes": {
+              "min": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "domain_id",
+      "parent": "integer",
+      "title": {
+        "uk": "ID домену",
+        "en": "Domain ID"
+      },
+      "description": {
+        "uk": "Цілочисельний ідентифікатор домену.",
+        "en": "Integer identifier of a domain."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "integer"
+          ]
+        },
+        "storage": {
+          "normalizer": "integer"
+        },
+        "parameters": {
+          "min": null,
+          "max": null,
+          "step": null
+        }
+      }
+    },
+    {
+      "name": "page_id",
+      "parent": "integer",
+      "title": {
+        "uk": "ID сторінки",
+        "en": "Page ID"
+      },
+      "description": {
+        "uk": "Цілочисельний ідентифікатор сторінки.",
+        "en": "Integer identifier of a page."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "integer"
+          ]
+        },
+        "storage": {
+          "normalizer": "integer"
+        },
+        "parameters": {
+          "min": null,
+          "max": null,
+          "step": null
+        }
+      }
+    },
+    {
+      "name": "content_type_id",
+      "parent": "integer",
+      "title": {
+        "uk": "ID типу контенту",
+        "en": "Content type ID"
+      },
+      "description": {
+        "uk": "Цілочисельний ідентифікатор типу контенту.",
+        "en": "Integer identifier of a content type."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "integer"
+          ]
+        },
+        "storage": {
+          "normalizer": "integer"
+        },
+        "parameters": {
+          "min": null,
+          "max": null,
+          "step": null
+        }
+      }
+    },
+    {
+      "name": "field_type_id",
+      "parent": "integer",
+      "title": {
+        "uk": "ID типу поля",
+        "en": "Field type ID"
+      },
+      "description": {
+        "uk": "Цілочисельний ідентифікатор типу поля.",
+        "en": "Integer identifier of a field type."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "integer"
+          ]
+        },
+        "storage": {
+          "normalizer": "integer"
+        },
+        "parameters": {
+          "min": null,
+          "max": null,
+          "step": null
+        }
+      }
+    },
+    {
+      "name": "field_id",
+      "parent": "integer",
+      "title": {
+        "uk": "ID поля",
+        "en": "Field ID"
+      },
+      "description": {
+        "uk": "Цілочисельний ідентифікатор поля.",
+        "en": "Integer identifier of a field."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "integer"
+          ]
+        },
+        "storage": {
+          "normalizer": "integer"
+        },
+        "parameters": {
+          "min": null,
+          "max": null,
+          "step": null
+        }
+      }
+    },
+    {
+      "name": "item_id",
+      "parent": "integer",
+      "title": {
+        "uk": "ID елемента",
+        "en": "Item ID"
+      },
+      "description": {
+        "uk": "Цілочисельний ідентифікатор елемента контенту.",
+        "en": "Integer identifier of a content item."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "integer"
+          ]
+        },
+        "storage": {
+          "normalizer": "integer"
+        },
+        "functions": {
+          "edit": "editContentItem"
+        },
+        "parameters": {
+          "min": null,
+          "max": null,
+          "step": null,
+          "content_types": {
+            "type": "content_type_id",
+            "value": "system_name",
+            "multiple": true,
+            "required": true,
+            "title": "field_parameter_content_types",
+            "description": "field_parameter_content_types_help",
+            "default": []
+          }
+        }
+      }
+    },
+    {
+      "name": "user_id",
+      "parent": "integer",
+      "title": {
+        "uk": "ID користувача",
+        "en": "User ID"
+      },
+      "description": {
+        "uk": "Цілочисельний ідентифікатор користувача.",
+        "en": "Integer identifier of a user."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "integer"
+          ]
+        },
+        "storage": {
+          "normalizer": "integer"
+        },
+        "parameters": {
+          "min": null,
+          "max": null,
+          "step": null
+        }
+      }
+    },
+    {
+      "name": "usergroup_id",
+      "parent": "integer",
+      "title": {
+        "uk": "ID групи користувачів",
+        "en": "User group ID"
+      },
+      "description": {
+        "uk": "Цілочисельний ідентифікатор групи користувачів.",
+        "en": "Integer identifier of a user group."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "integer"
+          ]
+        },
+        "storage": {
+          "normalizer": "integer"
+        },
+        "parameters": {
+          "min": null,
+          "max": null,
+          "step": null
+        }
+      }
+    },
+    {
+      "name": "decimal",
+      "parent": "number",
+      "title": {
+        "uk": "Десяткове число",
+        "en": "Decimal"
+      },
+      "description": {
+        "uk": "Числове поле для точних дробових значень.",
+        "en": "Numeric field for precise fractional values."
+      },
+      "settings": {
+        "input": {
+          "template": "number_input"
+        },
+        "output": {
+          "template": "number_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "numeric"
+          ]
+        },
+        "storage": {
+          "normalizer": "decimal"
+        }
+      }
+    },
+    {
+      "name": "boolean",
+      "parent": null,
+      "title": {
+        "uk": "Логічне значення",
+        "en": "Boolean"
+      },
+      "description": {
+        "uk": "Базовий тип для значень true або false.",
+        "en": "Base type for true or false values."
+      },
+      "settings": {
+        "input": {
+          "renderer": "checkbox_input",
+          "template": "checkbox_input"
+        },
+        "output": {
+          "renderer": "boolean_output",
+          "template": "boolean_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "boolean"
+          ]
+        },
+        "storage": {
+          "normalizer": "boolean"
+        }
+      }
+    },
+    {
+      "name": "checkbox",
+      "parent": "boolean",
+      "title": {
+        "uk": "Прапорець",
+        "en": "Checkbox"
+      },
+      "description": {
+        "uk": "Логічне поле, що вводиться через checkbox.",
+        "en": "Boolean field rendered as a checkbox input."
+      },
+      "settings": {
+        "input": {
+          "renderer": "checkbox_input",
+          "template": "checkbox_input"
+        },
+        "output": {
+          "renderer": "boolean_output",
+          "template": "boolean_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "boolean"
+          ]
+        },
+        "storage": {
+          "normalizer": "boolean"
+        }
+      }
+    },
+    {
+      "name": "yesno",
+      "parent": "boolean",
+      "title": {
+        "uk": "Так/Ні",
+        "en": "Yes/No"
+      },
+      "description": {
+        "uk": "Логічне поле, що вводиться як вибір між значеннями Так і Ні.",
+        "en": "Boolean field rendered as a Yes/No choice."
+      },
+      "settings": {
+        "input": {
+          "renderer": "yesno_input",
+          "template": "yesno_input"
+        },
+        "output": {
+          "renderer": "boolean_output",
+          "template": "yesno_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "boolean"
+          ]
+        },
+        "storage": {
+          "normalizer": "boolean"
+        }
+      }
+    },
+    {
+      "name": "date",
+      "parent": null,
+      "title": {
+        "uk": "Дата",
+        "en": "Date"
+      },
+      "description": {
+        "uk": "Базовий кореневий тип для календарних і часових значень.",
+        "en": "Base root type for calendar and time-related values."
+      },
+      "settings": {
+        "input": {
+          "template": "date_input"
+        },
+        "output": {
+          "renderer": "date_output",
+          "template": "date_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "date"
+          ]
+        },
+        "storage": {
+          "normalizer": "date"
+        },
+        "parameters": {
+          "min": {
+            "type": "string",
+            "title": "field_parameter_earliest",
+            "description": "field_parameter_earliest_help"
+          },
+          "max": {
+            "type": "string",
+            "title": "field_parameter_latest",
+            "description": "field_parameter_latest_help"
+          }
+        }
+      }
+    },
+    {
+      "name": "year",
+      "parent": "date",
+      "title": {
+        "uk": "Рік",
+        "en": "Year"
+      },
+      "description": {
+        "uk": "Часткова дата, що містить лише рік.",
+        "en": "Partial date containing only a year."
+      },
+      "settings": {
+        "input": {
+          "template": "year_input"
+        },
+        "output": {
+          "template": "plain_text"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "year"
+          ]
+        },
+        "storage": {
+          "normalizer": "date"
+        }
+      }
+    },
+    {
+      "name": "year_month",
+      "parent": "date",
+      "title": {
+        "uk": "Рік і місяць",
+        "en": "Year and month"
+      },
+      "description": {
+        "uk": "Часткова дата, що містить рік і місяць без конкретного дня.",
+        "en": "Partial date containing year and month without a specific day."
+      },
+      "settings": {
+        "input": {
+          "template": "year_month_input"
+        },
+        "output": {
+          "template": "plain_text"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "year_month"
+          ]
+        },
+        "storage": {
+          "normalizer": "date"
+        }
+      }
+    },
+    {
+      "name": "date_full",
+      "parent": "date",
+      "title": {
+        "uk": "Повна дата",
+        "en": "Full date"
+      },
+      "description": {
+        "uk": "Календарна дата з роком, місяцем і днем без часу доби.",
+        "en": "Calendar date with year, month, and day, without time of day."
+      },
+      "settings": {
+        "input": {
+          "template": "date_input"
+        },
+        "output": {
+          "renderer": "date_output",
+          "template": "date_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "date"
+          ]
+        },
+        "storage": {
+          "normalizer": "date"
+        }
+      }
+    },
+    {
+      "name": "datetime",
+      "parent": "date",
+      "title": {
+        "uk": "Дата і час",
+        "en": "Date and time"
+      },
+      "description": {
+        "uk": "Повне значення дати й часу для подій, публікацій, логів та інших часово-чутливих даних.",
+        "en": "Full date and time value for events, publications, logs, and other time-sensitive data."
+      },
+      "settings": {
+        "input": {
+          "template": "datetime_input"
+        },
+        "output": {
+          "renderer": "datetime_output",
+          "template": "datetime_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "datetime"
+          ]
+        },
+        "storage": {
+          "normalizer": "date"
+        }
+      }
+    },
+    {
+      "name": "time",
+      "parent": null,
+      "title": {
+        "uk": "Час",
+        "en": "Time"
+      },
+      "description": {
+        "uk": "Час доби без прив’язки до календарної дати.",
+        "en": "Time of day without an associated calendar date."
+      },
+      "settings": {
+        "input": {
+          "template": "time_input"
+        },
+        "output": {
+          "renderer": "time_output",
+          "template": "time_output"
+        },
+        "sanitize": {
+          "handler": "plain_text"
+        },
+        "validation": {
+          "rules": [
+            "time"
+          ]
+        },
+        "storage": {
+          "normalizer": "time"
+        },
+        "parameters": {
+          "min": {
+            "type": "string",
+            "title": "field_parameter_earliest",
+            "description": "field_parameter_earliest_help"
+          },
+          "max": {
+            "type": "string",
+            "title": "field_parameter_latest",
+            "description": "field_parameter_latest_help"
+          }
+        }
+      }
+    }
+  ],
+  "fields": []
+}

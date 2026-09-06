@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "name": "Pagination",
+      "title": "Pagination",
+      "description": "Renders reusable pagination navigation blocks.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "pgn",
+    "version": "1.0.0",
+    "dependencies": [],
+    "config": {},
+    "settings": {}
+  }
+}

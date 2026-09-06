@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "TODO",
+      "name": "ContentManager",
+      "title": "Content Manager",
+      "description": "Base plugin to manage content types and items.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "cm",
+    "version": "1.1.0",
+    "dependencies": [
+      "Forms",
+      "Pagination"
+    ],
+    "config": {
+      "handlers": {
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "config": {
+              "title": "TODO"
+            },
+            "typeList": {
+              "title": "TODO"
+            },
+            "fieldList": {
+              "title": "Manage global content fields"
+            },
+            "globalFieldEdit": {
+              "title": "Edit global content field"
+            },
+            "globalFieldSave": {
+              "title": "Save global content field"
+            },
+            "itemList": {
+              "title": "TODO"
+            },
+            "typeEdit": {
+              "title": "TODO"
+            },
+            "itemEdit": {
+              "title": "TODO"
+            },
+            "typeSave": {
+              "title": "TODO"
+            },
+            "itemSave": {
+              "title": "TODO"
+            },
+            "typeDelete": {
+              "title": "TODO"
+            },
+            "fieldEdit": {
+              "title": "Edit content field"
+            },
+            "fieldSave": {
+              "title": "Save content field"
+            },
+            "fieldAttach": {
+              "title": "Attach content field"
+            },
+            "fieldDetach": {
+              "title": "Detach content field"
+            },
+            "fieldMove": {
+              "title": "Reorder content fields"
+            },
+            "fieldDelete": {
+              "title": "Delete content field"
+            },
+            "typeManagerList": {
+              "title": "Manage content type managers"
+            },
+            "typeManagerUpdate": {
+              "title": "Update content type manager"
+            },
+            "itemDelete": {
+              "title": "TODO"
+            }
+          },
+          "default_action": "typeList"
+        },
+        "view": {
+          "title": "View",
+          "actions": {
+            "listTypes": {
+              "title": "List content types",
+              "api": true
+            },
+            "getType": {
+              "title": "Get content type structure",
+              "api": true
+            },
+            "searchItems": {
+              "title": "Search content items",
+              "api": true
+            },
+            "getItem": {
+              "title": "Get content item",
+              "api": true
+            }
+          }
+        },
+        "content": {
+          "title": "Content",
+          "actions": {
+            "createItem": {
+              "title": "Create content item",
+              "api": true
+            },
+            "updateItem": {
+              "title": "Update content item",
+              "api": true
+            },
+            "deleteItem": {
+              "title": "Delete content item",
+              "api": true
+            }
+          }
+        },
+        "structure": {
+          "title": "Structure",
+          "actions": {
+            "updateType": {
+              "title": "Update content type",
+              "api": true
+            },
+            "attachField": {
+              "title": "Attach field",
+              "api": true
+            },
+            "detachField": {
+              "title": "Detach field",
+              "api": true
+            },
+            "reorderFields": {
+              "title": "Reorder fields",
+              "api": true
+            }
+          }
+        }
+      },
+      "default_handler": "manage",
+      "default_language": "en"
+    },
+    "settings": {}
+  }
+}

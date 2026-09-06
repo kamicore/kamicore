@@ -1,0 +1,113 @@
+{
+    "schema_version": "1.0",
+    "type": "theme",
+    "data": {
+        "info": {
+            "name": "default",
+            "title": "Default theme",
+            "description": "Basic theme for Kami",
+            "version": "0.1.1",
+            "author": "Kami Core Team",
+            "language": "en"
+        },
+        "layouts": {
+            "main": {
+                "title": "Main page layout",
+                "filename": "layouts/main",
+                "wrappers": {
+                    "head_plugins": {
+                        "title": "Head plugins",
+                        "description": "The output of these plugins is located inside the <head> tag of the page and is not visible for the user. SEO plugins are usually located here."
+                    },
+                    "top_plugins": {
+                        "title": "Top section plugins",
+                        "description": "This is where plugins for the top of the page are placed, such as navigation, language switcher, etc."
+                    },
+                    "hero_plugins": {
+                        "title": "Hero section plugins",
+                        "description": "This is a place for hero section plugins."
+                    },
+                    "content_plugins": {
+                        "title": "Content section plugins",
+                        "description": "This is where plugins for the top of the page are placed, such as navigation, hero section, etc."
+                    },
+                    "footer_plugins": {
+                        "title": "Footer section plugins"
+                    }
+                }
+            },
+            "simple": {
+                "title": "Simple page layout",
+                "filename": "layouts/simple",
+                "wrappers": {
+                    "head_plugins": {
+                        "title": "Head plugins",
+                        "description": "The output of these plugins is located inside the <head> tag of the page and is not visible for the user. SEO plugins are usually located here."
+                    },
+                    "top_plugins": {
+                        "title": "Top section plugins",
+                        "description": "This is where plugins for the top of the page are placed, such as navigation, hero section, etc."
+                    },
+                    "content_plugins": {
+                        "title": "Content section plugins",
+                        "description": "This is a main content section."
+                    },
+                    "footer_plugins": {
+                        "title": "Footer section plugins"
+                    }
+                }
+            },
+            "sidebar": {
+                "title": "Page layout with left sidebar",
+                "filename": "layouts/page_with_sidebar",
+                "wrappers": {
+                    "head_plugins": {
+                        "title": "Head plugins",
+                        "description": "The output of these plugins is located inside the <head> tag of the page and is not visible for the user. SEO plugins are usually located here."
+                    },
+                    "top_plugins": {
+                        "title": "Top section plugins",
+                        "description": "This is where plugins for the top of the page are placed, such as navigation, hero section, etc."
+                    },
+                    "sidebar_plugins": {
+                        "title": "Left sidebar plugins",
+                        "description": "Left sidebar in user area (account navigation menu, widgets etc)"
+                    },
+                    "content_plugins": {
+                        "title": "Content section plugins",
+                        "description": "This is a main content section."
+                    },
+                    "footer_plugins": {
+                        "title": "Footer section plugins"
+                    }
+                }
+            },
+            "admin": {
+                "title": "Admin layout",
+                "filename": "layouts/admin",
+                "wrappers": {
+                    "head_plugins": {
+                        "title": "Head plugins",
+                        "description": "The output of these plugins is located inside the <head> tag of the page and is not visible for the user. SEO plugins are usually located here."
+                    },
+                    "sidebar": {
+                        "title": "Left sidebar",
+                        "description": "Left sidebar in admin area (admin navigation etc)"
+                    },
+                    "content_top": {
+                        "title": "Top section",
+                        "description": "..."
+                    },
+                    "content_middle": {
+                        "title": "Middle section",
+                        "description": "Work area."
+                    },
+                    "content_bottoms": {
+                        "title": "Footer section plugins"
+                    }
+                }
+            }
+        },
+        "settings": []
+    }
+}

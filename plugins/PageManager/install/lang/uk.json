@@ -1,0 +1,139 @@
+{
+  "plugin": {
+    "title": "Менеджер сторінок",
+    "description": "Створення сторінок, вибір макетів і розміщення плагінів у секціях сторінки."
+  },
+  "settings": {
+    "test": {
+      "title": "Тестове налаштування",
+      "description": "Тимчасове налаштування для розробки."
+    }
+  },
+  "handlers": {
+    "manage": {
+      "title": "Керування сторінками",
+      "actions": {
+        "config": {
+          "title": "Налаштування сторінок"
+        },
+        "list": {
+          "title": "Список сторінок"
+        },
+        "edit": {
+          "title": "Редагувати сторінку"
+        },
+        "save": {
+          "title": "Зберегти сторінку"
+        },
+        "delete": {
+          "title": "Видалити сторінку"
+        },
+        "createPage": {
+          "title": "Створити сторінку"
+        },
+        "pluginContextForm": {
+          "title": "Налаштування екземпляра плагіна"
+        },
+        "settings": {
+          "title": "Налаштування менеджера сторінок"
+        },
+        "pageLayoutData": {
+          "title": "Завантажити макет сторінки"
+        },
+        "createPageFromRecipe": {
+          "title": "Створити сторінку з recipe"
+        },
+        "recipes": {
+          "title": "Recipes сторінок"
+        },
+        "recipeSave": {
+          "title": "Зберегти recipe сторінки"
+        },
+        "recipeDelete": {
+          "title": "Видалити recipe сторінки"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "domain": "Домен",
+    "select_domain": "Оберіть домен…",
+    "pages": "Сторінки",
+    "back_to_pages": "Назад до сторінок",
+    "manage_domains": "Керувати доменами",
+    "title": "Назва",
+    "slug": "Slug",
+    "description": "Опис",
+    "layout": "Макет",
+    "parent_page": "Батьківська сторінка",
+    "no_parent_page": "Без батьківської сторінки",
+    "invalid_parent_page": "Обрана батьківська сторінка недійсна.",
+    "parent_page_cycle": "Сторінку не можна розмістити всередині неї самої або однієї з її дочірніх сторінок.",
+    "actions": "Дії",
+    "create_page": "Створити сторінку",
+    "edit_page": "Редагувати сторінку",
+    "delete_page": "Видалити сторінку",
+    "save": "Зберегти",
+    "cancel": "Скасувати",
+    "delete": "Видалити",
+    "available_plugins": "Доступні плагіни",
+    "head": "Секція head",
+    "top_section": "Верхня секція",
+    "content": "Контент",
+    "footer": "Нижня секція",
+    "select_handler": "Оберіть handler",
+    "plugin_settings_load_failed": "Не вдалося завантажити налаштування плагіна. Спробуйте ще раз.",
+    "no_pages": "Сторінок не знайдено.",
+    "add_page": "Додати сторінку",
+    "new_page_for": "Нова сторінка для",
+    "select_domain_to_view_pages": "Оберіть домен, щоб переглянути його сторінки",
+    "no_domain_selected": "Домен не обрано",
+    "loading_pages": "Завантаження сторінок…",
+    "load_pages_failed": "Не вдалося завантажити сторінки.",
+    "retry": "Спробувати ще раз",
+    "domain_unavailable": "Домен недоступний.",
+    "delete_page_confirm": "Видалити «{title}»? Цю дію неможливо скасувати.",
+    "delete_page_failed": "Не вдалося видалити сторінку.",
+    "page_count_one": "{count} сторінка",
+    "page_count_few": "{count} сторінки",
+    "page_count_many": "{count} сторінок",
+    "page_count_other": "{count} сторінки",
+    "drag_plugins_help": "Перетягніть плагін у будь-яку доступну зону сторінки.",
+    "drag_plugins_here": "Перетягніть плагіни сюди",
+    "layout_preview": "Макет сторінки",
+    "layout_preview_help": "Розташування зон нижче відповідає структурі обраного макета.",
+    "save_page": "Зберегти сторінку",
+    "loading_layout": "Завантаження макета сторінки…",
+    "layout_loaded": "Макет завантажено",
+    "layout_load_failed": "Не вдалося завантажити макет сторінки.",
+    "unknown_wrapper": "Цю зону не оголошено в макеті.",
+    "unplaced_wrappers": "Нерозміщені wrapper-и",
+    "unplaced_wrappers_help": "Цих wrapper-ів немає в обраному макеті. Перемістіть усе, що потрібно зберегти, перед збереженням сторінки; нерозміщені wrapper-и буде видалено.",
+    "plugin_settings": "Налаштування плагіна",
+    "loading_plugin_settings": "Завантаження налаштувань плагіна…",
+    "remove_plugin": "Прибрати плагін",
+    "move_plugin": "Перемістити плагін",
+    "page_saved": "Сторінку збережено.",
+    "page_recipes": "Recipes сторінок",
+    "page_recipes_description": "Повторно використовувані схеми сторінок: layout, стандартні екземпляри плагінів і навігація.",
+    "recipes": "Recipes",
+    "recipe": "Recipe",
+    "select_recipe": "Оберіть recipe…",
+    "create_from_recipe": "З recipe",
+    "create_from_recipe_for": "Нова сторінка з recipe для",
+    "recipe_key": "Ключ recipe",
+    "name": "Назва",
+    "payload_json": "Payload JSON",
+    "edit_recipe": "Редагувати recipe",
+    "edit": "Редагувати",
+    "delete_recipe_confirm": "Видалити цей recipe?",
+    "no_recipes": "Recipes не знайдено.",
+    "recipe_page_prefix": "Префікс URL: {prefix}",
+    "recipe_no_page_prefix": "Без префікса URL",
+    "lifecycle_plugins_enable": "Увімкнути lifecycle-плагіни",
+    "lifecycle_plugins_disable": "Вимкнути lifecycle-плагіни",
+    "lifecycle_plugins_help": "Оверрайди рівня сторінки для плагінів, які ініціалізуються поза wrapper.",
+    "lifecycle_plugins_conflict": "Lifecycle-плагін не може бути одночасно увімкнений і вимкнений для тієї самої сторінки.",
+    "invalid_layout": "Обраний макет недоступний для цього домену."
+  }
+}

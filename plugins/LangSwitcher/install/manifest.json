@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "name": "LangSwitcher",
+      "title": "language switcher",
+      "description": "Plugin to display single static content item on front-end.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "ls",
+    "version": "1.0.0",
+    "dependencies": [],
+    "config": {
+      "handlers": {
+        "view": {
+          "title": "View",
+          "actions": {
+            "view": {
+              "title": "View"
+            }
+          },
+          "default_action": "view",
+          "instance_params": {
+            "template" : {
+						"title": "Language switcher template",
+						"description": "Select the template used to render the language switcher.",
+						"type": "select",
+						"options": [
+							{
+								"title": "Simple links",
+									"value": "simple"
+							},
+							{
+								"title": "Flag links",
+								"value": "footer"
+							},
+							{
+								"title": "Select",
+								"value": "select"
+							}
+						],
+						"default": "simple"
+					}
+          }
+        }
+      },
+      "default_handler": "view",
+      "default_language": "en"
+    },
+    "settings": {}
+  }
+}

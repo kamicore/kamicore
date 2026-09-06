@@ -1,0 +1,50 @@
+.form-repeatable-list {
+    display: grid;
+    gap: 8px;
+}
+
+.form-repeatable-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.form-repeatable-control {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.form-repeatable-actions,
+.form-repeatable-footer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-repeatable-footer {
+    margin-top: 8px;
+}
+
+.form-repeatable-row-richtext {
+    align-items: stretch;
+}
+
+.form-repeatable-row-richtext > .form-field-richtext {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-block: 0;
+}
+
+.media-field-row > .form-repeatable-actions {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 720px) {
+    .form-repeatable-row {
+        flex-wrap: wrap;
+    }
+
+    .form-repeatable-actions {
+        flex-wrap: wrap;
+    }
+}

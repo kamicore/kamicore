@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "be358f3f-97bc-4cb8-aed2-9694da93719c",
+      "name": "PluginManager",
+      "title": "Plugin manager",
+      "description": "Install, select and set up plugins",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "pm",
+    "version": "1.1.1",
+    "dependencies": [
+      "Forms",
+      "PageManager",
+      "Navigation"
+    ],
+    "config": {
+      "handlers": {
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "list": {
+              "title": "Plugins"
+            },
+            "setup": {
+              "title": "Setup plugin"
+            },
+            "plugin": {
+              "title": "Plugin settings"
+            },
+            "lifecycle": {
+              "title": "Plugin lifecycle action"
+            },
+            "pluginActivation": {
+              "title": "Plugin domain activation"
+            },
+            "pluginSettingsSave": {
+              "title": "Save plugin settings"
+            },
+            "pluginDomainSettings": {
+              "title": "Load plugin domain settings"
+            },
+            "resolveSetup": {
+              "title": "Resolve setup plan"
+            },
+            "applySetup": {
+              "title": "Apply setup plan"
+            }
+          },
+          "default_action": "list"
+        }
+      },
+      "default_handler": "manage",
+      "default_language": "en"
+    },
+    "settings": {},
+    "min_kami_version": "1.0.0"
+  }
+}

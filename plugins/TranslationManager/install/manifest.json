@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "name": "TranslationManager",
+      "title": "Translation manager",
+      "description": "Manage system and content translations.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "trm",
+    "version": "1.0.0",
+    "dependencies": [
+      "Forms",
+      "TextProcessor",
+      "Pagination"
+    ],
+    "config": {
+      "handlers": {
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "overview": {
+              "title": "Overview"
+            },
+            "dictionaryEdit": {
+              "title": "Edit system dictionary"
+            },
+            "dictionaryTranslate": {
+              "title": "Translate system dictionary"
+            },
+            "dictionarySave": {
+              "title": "Save system dictionary"
+            },
+            "systemList": {
+              "title": "System entities"
+            },
+            "systemEdit": {
+              "title": "Edit system translation"
+            },
+            "systemTranslate": {
+              "title": "Translate system entity"
+            },
+            "systemSave": {
+              "title": "Save system translation"
+            },
+            "contentList": {
+              "title": "Content"
+            },
+            "contentEdit": {
+              "title": "Edit content translation"
+            },
+            "contentTranslate": {
+              "title": "Translate content"
+            },
+            "contentSave": {
+              "title": "Save content translation"
+            },
+            "batchTranslate": {
+              "title": "Batch translate"
+            }
+          },
+          "default_action": "overview"
+        }
+      },
+      "default_handler": "manage",
+      "default_language": "en"
+    },
+    "settings": {}
+  }
+}

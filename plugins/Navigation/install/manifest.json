@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+
+  "type": "plugin",
+
+  "data": {
+
+	"info": {
+		"uuid": "3564f84d-fdac-4250-acb0-b91bcedd5c1c",
+		"name": "Navigation",
+		"title": "Navigation",
+		"description": "Menu management and navigation rendering for the project.",
+
+		"origin_type": "local",
+		"origin_ref": null,
+		"author": "Kami team"
+	},
+
+	"prefix": "nav",
+	"version": "1.0.4",
+
+	"dependencies": [
+	  "Forms"
+	],
+
+	"config": {
+		"handlers": {
+			"view": {
+				"title": "View",
+				"actions": {
+					"show": {
+						"title": "Show menu"
+					}
+				},
+
+				"default_action": "show",
+
+				"instance_params": {
+					"template" : {
+						"title": "Navigation template",
+						"description": "Select the template used to render the navigation menu.",
+						"type": "select",
+						"options": [
+							{
+								"title": "Top navigation panel",
+									"value": "topnav"
+							},
+							{
+								"title": "Footer menu",
+								"value": "footer"
+							},
+							{
+								"title": "Sidebar menu",
+								"value": "sidebar"
+							}
+						],
+						"default": "topnav"
+					},
+					"menu_id": {
+						"title": "Menu to display",
+						"description": "Select a menu to be displayed.",
+						"type": "item_id",
+						"content_types": ["navmenu"],
+						"default": null
+					}
+				}
+			},
+
+			"manage": {
+				"title": "Manage",
+				"actions": {
+					"list": {
+						"title": "List menus"
+					},
+					"create": {
+						"title": "Create menu"
+					},
+					"edit": {
+						"title": "Edit menu"
+					},
+					"save": {
+						"title": "Save menu"
+					},
+					"delete": {
+						"title": "Delete menu"
+					}
+				},
+
+				"default_action": "list"
+			}
+		},
+
+		"default_handler": "view",
+
+		"default_language": "en"
+	},
+
+	"settings": {
+	}
+  }
+}
+

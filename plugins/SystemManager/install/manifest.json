@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "f4c26c79-93b8-4cf2-b56a-647fd1b13b75",
+      "name": "SystemManager",
+      "title": "System manager",
+      "description": "Manage system settings, domains and secrets.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "sm",
+    "version": "0.1.0",
+    "dependencies": ["Forms"],
+    "config": {
+      "handlers": {
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "overview": {"title": "System"},
+            "settings": {"title": "System settings"},
+            "settingsSave": {"title": "Save system settings"},
+            "domains": {"title": "Domains"},
+            "domainEdit": {"title": "Edit domain"},
+            "domainSave": {"title": "Save domain"},
+            "secrets": {"title": "Secrets"},
+            "secretSave": {"title": "Save secret"},
+            "secretDelete": {"title": "Delete secret"}
+          },
+          "default_action": "overview"
+        }
+      },
+      "default_handler": "manage",
+      "default_language": "en"
+    },
+    "settings": {},
+    "min_kami_version": "1.0.0"
+  }
+}

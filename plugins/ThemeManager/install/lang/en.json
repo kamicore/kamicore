@@ -1,0 +1,36 @@
+{
+  "plugin": {
+    "title": "Theme manager",
+    "description": "Install, update and remove themes."
+  },
+  "handlers": {
+    "manage": {
+      "title": "Manage",
+      "actions": {
+        "overview": {
+          "title": "Themes"
+        },
+        "lifecycle": {
+          "title": "Install, update or uninstall theme"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "themes": "Themes",
+    "themes_help": "Themes found in the themes directory and installed theme records.",
+    "theme": "Theme",
+    "version": "Version",
+    "status": "Status",
+    "used_on": "Used on",
+    "actions": "Actions",
+    "install": "Install",
+    "update": "Update",
+    "uninstall": "Uninstall",
+    "installed": "Installed",
+    "not_installed": "Not installed",
+    "files_missing": "Files missing",
+    "confirm_uninstall": "Uninstall this theme?",
+    "operation_failed": "Theme operation failed."
+  }
+}

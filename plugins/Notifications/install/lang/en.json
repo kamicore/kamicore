@@ -1,0 +1,19 @@
+{
+  "plugin": {
+    "title": "Notifications",
+    "description": "Transient session notifications delivered through the standard AJAX endpoint."
+  },
+  "handlers": {
+    "view": {
+      "title": "Notifications",
+      "actions": {
+        "view": {
+          "title": "Notification container"
+        },
+        "get": {
+          "title": "Get notifications"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+/* Shared system UI primitives that must not depend on the active theme. */
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    fill: none;
+    stroke: currentColor;
+}
+
+.icon-sm {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-lg {
+    width: 24px;
+    height: 24px;
+}

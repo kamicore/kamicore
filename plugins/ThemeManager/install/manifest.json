@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "name": "ThemeManager",
+      "title": "Theme manager",
+      "description": "Install, update and remove themes.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "tm",
+    "version": "1.0.1",
+    "dependencies": [],
+    "config": {
+      "handlers": {
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "overview": {
+              "title": "Themes"
+            },
+            "lifecycle": {
+              "title": "Install, update or uninstall theme"
+            }
+          },
+          "default_action": "overview"
+        }
+      },
+      "default_handler": "manage",
+      "default_language": "en"
+    },
+    "settings": {}
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "plugin": {
+    "title": "Static Content Viewer",
+    "description": "Display a single static content item on the front end."
+  },
+  "handlers": {
+    "view": {
+      "title": "Display static content",
+      "actions": {
+        "view": {
+          "title": "View static content"
+        }
+      },
+      "instance_params": {
+        "item_id": {
+          "title": "Static content item",
+          "description": "Static content item to display."
+        }
+      }
+    },
+    "manage": {
+      "title": "Manage static content",
+      "actions": {
+        "config": {
+          "title": "Static content settings"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "incorrect_viewer_call": "The static content viewer was called with invalid parameters.",
+    "no_content": "No static content is available."
+  }
+}

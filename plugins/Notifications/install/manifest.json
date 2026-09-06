@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "7a0c0b7b-e5de-4422-acd6-7d145dcfac73",
+      "name": "Notifications",
+      "title": "Notifications",
+      "description": "Transient session notifications delivered through the standard AJAX endpoint.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "notify",
+    "version": "1.0.1",
+    "dependencies": [],
+    "config": {
+      "handlers": {
+        "view": {
+          "title": "View",
+          "actions": {
+            "view": {
+              "title": "Notification container"
+            },
+            "get": {
+              "title": "Get notifications"
+            }
+          },
+          "default_action": "view"
+        }
+      },
+      "default_handler": "view",
+      "default_language": "en"
+    },
+    "settings": {
+      "expire": {
+        "title": "Notification lifetime",
+        "description": "Maximum notification lifetime in seconds. Set to 0 to disable expiration.",
+        "type": "integer",
+        "default": 3600,
+        "global": 0
+      }
+    },
+    "min_kami_version": "1.0.0"
+  }
+}

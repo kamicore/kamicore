@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "7c294eb7-4faf-4e7b-8d6e-cd85f04285c5",
+      "name": "ViewStatic",
+      "title": "Static content viewer",
+      "description": "Plugin to display single static content item on front-end.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "cv",
+    "version": "1.0.3",
+    "dependencies": [],
+    "config": {
+      "handlers": {
+        "view": {
+          "title": "View",
+          "actions": {
+            "view": {
+              "title": "View"
+            }
+          },
+          "default_action": "view",
+          "instance_params": {
+            "item_id": {
+              "title": "Single item",
+              "description": "Item to display.",
+              "type": "item_id",
+              "content_types": [
+                "static_content"
+              ],
+              "default": 0
+            }
+          }
+        },
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "config": {
+              "title": "TODO"
+            }
+          },
+          "default_action": "config"
+        }
+      },
+      "default_handler": "view",
+      "default_language": "en"
+    },
+    "settings": {}
+  }
+}

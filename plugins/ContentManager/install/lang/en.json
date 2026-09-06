@@ -1,0 +1,412 @@
+{
+  "plugin": {
+    "title": "Content Manager",
+    "description": "Create and manage content types and content items."
+  },
+  "content_types": {
+    "static_content": {
+      "title": "Static content",
+      "description": "Reusable static content block."
+    },
+    "article": {
+      "title": "Article",
+      "description": "Basic publishable article."
+    },
+    "static_content_block": {
+      "title": "Static content block",
+      "description": "Wrapper for several content items."
+    },
+    "article_category": {
+      "title": "Article category",
+      "description": ""
+    }
+  },
+  "handlers": {
+    "manage": {
+      "title": "Manage content",
+      "actions": {
+        "config": {
+          "title": "Content settings"
+        },
+        "typeList": {
+          "title": "List content types"
+        },
+        "fieldList": {
+          "title": "Manage global content fields"
+        },
+        "globalFieldEdit": {
+          "title": "Edit global content field"
+        },
+        "globalFieldSave": {
+          "title": "Save global content field"
+        },
+        "itemList": {
+          "title": "List content items"
+        },
+        "typeEdit": {
+          "title": "Edit content type"
+        },
+        "itemEdit": {
+          "title": "Edit content item"
+        },
+        "typeSave": {
+          "title": "Save content type"
+        },
+        "itemSave": {
+          "title": "Save content item"
+        },
+        "typeDelete": {
+          "title": "Delete content type"
+        },
+        "typeManagerList": {
+          "title": "Manage content type managers"
+        },
+        "typeManagerUpdate": {
+          "title": "Update content type manager"
+        },
+        "fieldEdit": {
+          "title": "Edit content field"
+        },
+        "fieldSave": {
+          "title": "Save content field"
+        },
+        "fieldAttach": {
+          "title": "Attach content field"
+        },
+        "fieldDetach": {
+          "title": "Detach content field"
+        },
+        "fieldMove": {
+          "title": "Reorder content fields"
+        },
+        "fieldDelete": {
+          "title": "Delete content field"
+        },
+        "itemDelete": {
+          "title": "Delete content item"
+        }
+      }
+    },
+    "view": {
+      "title": "View content",
+      "actions": {
+        "listTypes": {
+          "title": "List content types"
+        },
+        "getType": {
+          "title": "Get content type structure"
+        },
+        "searchItems": {
+          "title": "Search content items"
+        },
+        "getItem": {
+          "title": "Get content item"
+        }
+      }
+    },
+    "content": {
+      "title": "Edit content",
+      "actions": {
+        "createItem": {
+          "title": "Create content item"
+        },
+        "updateItem": {
+          "title": "Update content item"
+        },
+        "deleteItem": {
+          "title": "Delete content item"
+        }
+      }
+    },
+    "structure": {
+      "title": "Edit content structure",
+      "actions": {
+        "updateType": {
+          "title": "Update content type"
+        },
+        "attachField": {
+          "title": "Attach field"
+        },
+        "detachField": {
+          "title": "Detach field"
+        },
+        "reorderFields": {
+          "title": "Reorder fields"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "content_types": "Content types",
+    "manage_schemas": "Manage schemas and content items.",
+    "search_content_types": "Search content types…",
+    "name_and_description": "Name and description",
+    "items": "Items",
+    "actions": "Actions",
+    "types_count": "Content types",
+    "content": "Content",
+    "new_item": "New item",
+    "search": "Search…",
+    "status": "Status",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "delete_content_type": "Delete content type",
+    "confirm_delete_content_type": "Delete \"{title}\"? This action cannot be undone.",
+    "delete_item": "Delete content item",
+    "confirm_delete_item": "Delete \"{title}\"? This action cannot be undone.",
+    "item_saved": "Item saved.",
+    "item_deleted": "Item deleted.",
+    "no_items": "No content items found.",
+    "name": "Name",
+    "manage_items": "Search, create, edit and delete content items.",
+    "type_count": "{count} content types",
+    "item_count": "{count} items",
+    "create_content_type": "Create content type",
+    "no_content_types": "No content types found.",
+    "open_items": "Open items",
+    "edit_structure": "Edit structure",
+    "edit_item": "Edit item",
+    "back_to_items": "Back to items",
+    "edit_item_help": "Edit the content fields and save your changes.",
+    "delete_item_failed": "Failed to delete content item.",
+    "invalid_item": "Invalid content item.",
+    "item_not_found": "Content item not found.",
+    "manage_type_managers": "Type managers",
+    "content_type_managers": "Content type managers",
+    "content_type_managers_help": "Root-only assignment of the administrative plugin responsible for each content type.",
+    "back_to_content_types": "Back to content types",
+    "content_type": "Content type",
+    "owner_plugin": "Owner plugin",
+    "default_manager": "Default manager",
+    "current_manager": "Current manager",
+    "source": "Source",
+    "save_manager": "Save manager",
+    "restore_default_manager": "Restore manifest default",
+    "no_manager": "No manager",
+    "no_owner": "No owner",
+    "inactive": "inactive",
+    "overridden": "Overridden",
+    "from_manifest": "From manifest",
+    "saving_manager": "Saving…",
+    "manager_saved": "Content type manager saved.",
+    "manager_reset": "Manifest manager restored.",
+    "manager_save_failed": "Failed to save the content type manager.",
+    "root_only": "Root access required.",
+    "content_type_not_found": "Content type not found.",
+    "invalid_manager": "Invalid manager plugin.",
+    "manager_not_found": "Manager plugin not found.",
+    "invalid_manager_mode": "Invalid manager update mode.",
+    "content_type_access_denied": "This content type is managed by another plugin.",
+    "structure_editor_help": "Edit the content type and compose its field structure.",
+    "system_name": "System name",
+    "title": "Title",
+    "description": "Description",
+    "parent_content_type": "Parent content type",
+    "no_parent_type": "No parent type",
+    "title_field": "Title field",
+    "summary_field": "Summary field",
+    "has_slug": "Items have slugs",
+    "save_content_type": "Save content type",
+    "edit_content_type": "Edit content type",
+    "content_type_saved": "Content type saved.",
+    "content_type_deleted": "Content type deleted.",
+    "delete_content_type_failed": "Failed to delete the content type.",
+    "invalid_type_data": "System name and title are required. Use lowercase Latin letters, digits and underscores.",
+    "type_name_exists": "This content type system name already exists.",
+    "invalid_parent_type": "Invalid parent content type.",
+    "type_has_items": "Delete all content items first.",
+    "type_has_children": "This content type has child types.",
+    "declarative_structure_notice": "This structure is declared by a plugin. Manual changes can be restored the next time that plugin is updated.",
+    "fields": "Fields",
+    "fields_help": "Add existing fields, create new ones and set their order.",
+    "field": "Field",
+    "existing_field": "Existing field",
+    "select_existing_field": "Select a field…",
+    "attach_field": "Add existing field",
+    "create_field": "Create field",
+    "edit_field": "Edit field",
+    "save_field": "Save field",
+    "detach_field": "Remove from structure",
+    "delete_field_globally": "Delete field globally",
+    "confirm_detach_field": "Remove this field from the structure? Its values in items of this content type will be permanently deleted.",
+    "confirm_delete_field": "Delete this field globally? This action cannot be undone.",
+    "structure_operation_failed": "Failed to update the structure.",
+    "field_type": "Field type",
+    "order": "Order",
+    "move_up": "Move up",
+    "move_down": "Move down",
+    "back_to_structure": "Back to structure",
+    "field_editor_help": "Create a global field definition and configure its first use in this content type.",
+    "field_usage_count": "Used in {count} content types.",
+    "search_weight": "Search weight",
+    "default_value": "Default value",
+    "field_options_json": "Select options (JSON)",
+    "field_options_help": "For select fields: an array of objects with title and value keys.",
+    "field_type_parameters": "Type parameters",
+    "field_parameter_placeholder": "Placeholder",
+    "field_parameter_placeholder_help": "Text displayed while the field is empty.",
+    "field_parameter_min_length": "Minimum length",
+    "field_parameter_min_length_help": "Minimum permitted number of characters.",
+    "field_parameter_max_length": "Maximum length",
+    "field_parameter_max_length_help": "Maximum permitted number of characters.",
+    "field_parameter_rows": "Visible rows",
+    "field_parameter_rows_help": "Initial visible height of the multiline editor.",
+    "field_parameter_options": "Options (JSON)",
+    "field_parameter_options_help": "An array of objects with title or label and value keys.",
+    "field_parameter_min": "Minimum value",
+    "field_parameter_min_help": "Smallest permitted numeric value.",
+    "field_parameter_max": "Maximum value",
+    "field_parameter_max_help": "Largest permitted numeric value.",
+    "field_parameter_step": "Step",
+    "field_parameter_step_help": "Permitted increment between numeric values.",
+    "field_parameter_content_types": "Allowed content types",
+    "field_parameter_content_types_help": "Content types whose items can be selected in this field.",
+    "field_parameter_earliest": "Earliest value",
+    "field_parameter_earliest_help": "Earliest permitted date or partial date in the field format.",
+    "field_parameter_latest": "Latest value",
+    "field_parameter_latest_help": "Latest permitted date or partial date in the field format.",
+    "field_parameter_required": "Parameter {parameter} is required.",
+    "invalid_field_parameter": "Invalid value for parameter {parameter}.",
+    "invalid_field_parameter_json": "Parameter {parameter} must contain valid JSON.",
+    "field_settings": "Field settings",
+    "required": "Required",
+    "indexed": "Indexed",
+    "unique": "Unique",
+    "translatable": "Translatable",
+    "multiple": "Multiple values",
+    "hidden": "Hidden",
+    "readonly": "Read only",
+    "field_not_found": "Field not found.",
+    "invalid_field_data": "System name and title are required. Use lowercase Latin letters, digits and underscores.",
+    "invalid_field_type": "Invalid field type.",
+    "field_name_exists": "This field system name already exists.",
+    "invalid_field_options": "Field options must be a valid JSON array.",
+    "field_identity_has_values": "A field containing values cannot change its system name or type.",
+    "field_saved": "Field saved.",
+    "field_attached": "Field added to the structure.",
+    "field_already_attached": "This field is already in the structure.",
+    "field_detached": "Field removed from the structure and its values for this content type were deleted.",
+    "invalid_direction": "Invalid direction.",
+    "field_still_in_use": "The field is attached to a content type and cannot be deleted.",
+    "field_deleted": "Field deleted.",
+    "manual_default": "Manual default",
+    "field_not_in_structure": "This field is not part of the current structure.",
+    "field_identity_root_only": "Only Root can rename or change the type of a field shared with another manager.",
+    "field_parameter_source_fields": "Suggestion source fields",
+    "field_parameter_source_fields_help": "Indexed text fields whose existing values are offered as suggestions. Leave empty to use this field itself.",
+    "field_parameter_media_root": "Media root",
+    "field_parameter_media_root_help": "Optional Media subfolder used as the logical root of the picker.",
+    "field_parameter_media_accept": "Accepted media",
+    "field_parameter_media_accept_help": "Optional comma-separated MIME/extension filters for the picker, for example image/*,pdf.",
+    "field_type_requires_indexed": "This field type requires indexing.",
+    "autocomplete_source_invalid": "Autocomplete source fields must be indexed text fields.",
+    "multiple_boolean_not_supported": "Boolean fields cannot contain multiple values.",
+    "manage_fields": "Fields",
+    "field_definitions": "Fields",
+    "field_definitions_help": "Review and edit global field definitions, or remove fields that are no longer used.",
+    "search_fields": "Search fields…",
+    "field_count": "{count} fields",
+    "no_fields": "No fields found.",
+    "used_in": "Used in",
+    "field_unused": "Unused",
+    "stored_values": "Has values",
+    "no_stored_values": "No values",
+    "delete_field_failed": "Failed to delete the field.",
+    "field_used_lock": "Detach this field from all content types before deleting it.",
+    "field_values_lock": "This field contains stored values and cannot be deleted.",
+    "confirm_delete_field_with_values": "Delete \"{title}\" and all remaining stored values? This action cannot be undone.",
+    "edit_global_field": "Edit global field",
+    "global_field_editor_help": "These settings define the field globally and affect every content type that uses it.",
+    "field_attachment_editor_help": "These settings apply only to this field in the current content type. Leave the title empty to use the global title.",
+    "field_attachment_settings": "Content type settings",
+    "global_field_settings": "Global field settings",
+    "back_to_fields": "Back to fields",
+    "global_field_saved": "Global field saved."
+  },
+  "fields": {
+    "internal_title": {
+      "title": "Internal title",
+      "description": "Used only to identify this content item in the administration interface."
+    },
+    "static_content_body": {
+      "title": "Content",
+      "description": "Formatted content of the static block."
+    },
+    "article_body": {
+      "title": "Article body",
+      "description": "Formatted article content."
+    },
+    "static_item_template": {
+      "title": "Item template",
+      "description": "Template used to render the static content item.",
+      "options": {
+        "default": "Default",
+        "container": "Container",
+        "card": "Card",
+        "compact": "Compact"
+      }
+    },
+    "display_title": {
+      "title": "Display title",
+      "description": "Optional public title displayed with the content block."
+    },
+    "content_items_list": {
+      "title": "Content items",
+      "description": "Content items included in this block."
+    },
+    "block_template": {
+      "title": "Block template",
+      "description": "Template used to render the content block.",
+      "options": {
+        "default": "Default",
+        "card": "Card",
+        "compact": "Compact",
+        "responsive_grid": "Responsive grid"
+      }
+    },
+    "max_items_per_row": {
+      "title": "Items per row",
+      "description": "Maximum number of items in one row."
+    },
+    "min_item_width": {
+      "title": "Minimum item width",
+      "description": "Minimum item width in pixels."
+    },
+    "published_at": {
+      "title": "Published at",
+      "description": "Date and time when the article was published."
+    },
+    "updated_at": {
+      "title": "Updated at",
+      "description": "Date and time of the latest article update."
+    },
+    "summary": {
+      "title": "Summary",
+      "description": "Short summary displayed in article lists and previews."
+    },
+    "article_preview": {
+      "title": "Article preview"
+    },
+    "article_categories": {
+      "title": "Article categories",
+      "description": ""
+    },
+    "article_primary_category": {
+      "title": "Primary category",
+      "description": ""
+    },
+    "tags": {
+      "title": "Tags",
+      "description": ""
+    },
+    "related_items": {
+      "title": "Related items",
+      "description": ""
+    },
+    "category_page": {
+      "title": "Category page",
+      "description": "Page used to display this category and its articles."
+    }
+  }
+}

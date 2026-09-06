@@ -1,0 +1,34 @@
+{
+  "plugin": {
+    "title": "Менеджер плагінів",
+    "description": "Встановлення, оновлення, увімкнення, налаштування та видалення плагінів."
+  },
+  "phrases": {
+    "plugins": "Плагіни",
+    "back_to_plugins": "Назад до плагінів",
+    "installed_plugins": "Встановлені плагіни",
+    "available_plugins": "Доступні плагіни",
+    "install": "Встановити",
+    "update": "Оновити",
+    "uninstall": "Видалити",
+    "enable": "Увімкнути",
+    "disable": "Вимкнути",
+    "settings": "Налаштування",
+    "version": "Версія",
+    "author": "Автор",
+    "dependencies": "Залежності",
+    "missing_dependencies": "Не встановлено необхідні залежності.",
+    "confirm_uninstall": "Ви впевнені, що хочете видалити цей плагін?",
+    "setup": "Налаштувати",
+    "active": "Активний",
+    "inactive": "Неактивний",
+    "not_installed": "Не встановлено",
+    "manage": "Керувати",
+    "domains": "Домени",
+    "status": "Статус",
+    "actions": "Дії",
+    "plugin_manager": "Менеджер плагінів",
+    "save": "Зберегти",
+    "cancel": "Скасувати"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "plugin": {
+    "title": "Plugin Manager",
+    "description": "Install, update, enable, configure, and remove plugins."
+  },
+  "phrases": {
+    "plugins": "Plugins",
+    "back_to_plugins": "Back to plugins",
+    "installed_plugins": "Installed plugins",
+    "available_plugins": "Available plugins",
+    "install": "Install",
+    "update": "Update",
+    "uninstall": "Uninstall",
+    "enable": "Enable",
+    "disable": "Disable",
+    "settings": "Settings",
+    "version": "Version",
+    "author": "Author",
+    "dependencies": "Dependencies",
+    "missing_dependencies": "Required dependencies are missing.",
+    "confirm_uninstall": "Are you sure you want to uninstall this plugin?",
+    "setup": "Setup",
+    "active": "Active",
+    "inactive": "Inactive",
+    "not_installed": "Not installed",
+    "manage": "Manage",
+    "domains": "Domains",
+    "status": "Status",
+    "actions": "Actions",
+    "plugin_manager": "Plugin manager",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}

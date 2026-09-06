@@ -1,0 +1,36 @@
+{
+  "plugin": {
+    "title": "Менеджер тем",
+    "description": "Встановлення, оновлення та видалення тем."
+  },
+  "handlers": {
+    "manage": {
+      "title": "Керування",
+      "actions": {
+        "overview": {
+          "title": "Теми"
+        },
+        "lifecycle": {
+          "title": "Встановити, оновити або видалити тему"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "themes": "Теми",
+    "themes_help": "Теми, знайдені у теці themes, та встановлені записи тем.",
+    "theme": "Тема",
+    "version": "Версія",
+    "status": "Статус",
+    "used_on": "Використовується",
+    "actions": "Дії",
+    "install": "Встановити",
+    "update": "Оновити",
+    "uninstall": "Видалити",
+    "installed": "Встановлено",
+    "not_installed": "Не встановлено",
+    "files_missing": "Файли відсутні",
+    "confirm_uninstall": "Видалити цю тему з системи?",
+    "operation_failed": "Операцію з темою не виконано."
+  }
+}

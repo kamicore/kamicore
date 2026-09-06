@@ -1,0 +1,393 @@
+{
+  "plugin": {
+    "title": "Менеджер контенту",
+    "description": "Створення та керування типами контенту й елементами контенту."
+  },
+  "content_types": {
+    "static_content": {
+      "title": "Статичний контент",
+      "description": "Багаторазовий блок статичного контенту."
+    },
+    "article": {
+      "title": "Стаття",
+      "description": "Базова публічна стаття."
+    },
+    "static_content_block": {
+      "title": "Static content block",
+      "description": "Wrapper for several content items."
+    }
+  },
+  "handlers": {
+    "manage": {
+      "title": "Керування контентом",
+      "actions": {
+        "config": {
+          "title": "Налаштування контенту"
+        },
+        "typeList": {
+          "title": "Список типів контенту"
+        },
+        "fieldList": {
+          "title": "Керувати глобальними полями контенту"
+        },
+        "globalFieldEdit": {
+          "title": "Редагувати глобальне поле контенту"
+        },
+        "globalFieldSave": {
+          "title": "Зберегти глобальне поле контенту"
+        },
+        "itemList": {
+          "title": "Список елементів контенту"
+        },
+        "typeEdit": {
+          "title": "Редагувати тип контенту"
+        },
+        "itemEdit": {
+          "title": "Редагувати елемент контенту"
+        },
+        "typeSave": {
+          "title": "Зберегти тип контенту"
+        },
+        "itemSave": {
+          "title": "Зберегти елемент контенту"
+        },
+        "typeDelete": {
+          "title": "Видалити тип контенту"
+        },
+        "typeManagerList": {
+          "title": "Керувати менеджерами типів контенту"
+        },
+        "typeManagerUpdate": {
+          "title": "Оновити менеджер типу контенту"
+        },
+        "fieldEdit": {
+          "title": "Редагувати поле контенту"
+        },
+        "fieldSave": {
+          "title": "Зберегти поле контенту"
+        },
+        "fieldAttach": {
+          "title": "Додати поле до структури"
+        },
+        "fieldDetach": {
+          "title": "Прибрати поле зі структури"
+        },
+        "fieldMove": {
+          "title": "Змінити порядок полів"
+        },
+        "fieldDelete": {
+          "title": "Видалити поле контенту"
+        },
+        "itemDelete": {
+          "title": "Видалити елемент контенту"
+        }
+      }
+    },
+    "view": {
+      "title": "Перегляд контенту",
+      "actions": {
+        "listTypes": {
+          "title": "Список типів контенту"
+        },
+        "getType": {
+          "title": "Отримати структуру типу контенту"
+        },
+        "searchItems": {
+          "title": "Пошук елементів контенту"
+        },
+        "getItem": {
+          "title": "Отримати елемент контенту"
+        }
+      }
+    },
+    "content": {
+      "title": "Редагування контенту",
+      "actions": {
+        "createItem": {
+          "title": "Створити елемент контенту"
+        },
+        "updateItem": {
+          "title": "Оновити елемент контенту"
+        },
+        "deleteItem": {
+          "title": "Видалити елемент контенту"
+        }
+      }
+    },
+    "structure": {
+      "title": "Редагування структури контенту",
+      "actions": {
+        "updateType": {
+          "title": "Оновити тип контенту"
+        },
+        "attachField": {
+          "title": "Додати поле до структури"
+        },
+        "detachField": {
+          "title": "Прибрати поле зі структури"
+        },
+        "reorderFields": {
+          "title": "Змінити порядок полів"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "content_types": "Типи контенту",
+    "manage_schemas": "Керуйте схемами та елементами контенту.",
+    "search_content_types": "Пошук типів контенту…",
+    "name_and_description": "Назва й опис",
+    "items": "Елементи",
+    "actions": "Дії",
+    "types_count": "Типи контенту",
+    "content": "Контент",
+    "new_item": "Новий елемент",
+    "search": "Пошук…",
+    "status": "Статус",
+    "save": "Зберегти",
+    "cancel": "Скасувати",
+    "delete": "Видалити",
+    "delete_content_type": "Видалити тип контенту",
+    "confirm_delete_content_type": "Видалити \"{title}\"? Цю дію неможливо скасувати.",
+    "delete_item": "Видалити елемент контенту",
+    "confirm_delete_item": "Видалити \"{title}\"? Цю дію неможливо скасувати.",
+    "item_saved": "Елемент збережено.",
+    "item_deleted": "Елемент видалено.",
+    "no_items": "Елементів контенту не знайдено.",
+    "name": "Назва",
+    "manage_items": "Пошук, створення, редагування та видалення елементів контенту.",
+    "type_count": "{count} типів контенту",
+    "item_count": "{count} елементів",
+    "create_content_type": "Створити тип контенту",
+    "no_content_types": "Типів контенту не знайдено.",
+    "open_items": "Відкрити елементи",
+    "edit_structure": "Редагувати структуру",
+    "edit_item": "Редагувати елемент",
+    "back_to_items": "Назад до елементів",
+    "edit_item_help": "Відредагуйте поля контенту та збережіть зміни.",
+    "delete_item_failed": "Не вдалося видалити елемент контенту.",
+    "invalid_item": "Некоректний елемент контенту.",
+    "item_not_found": "Елемент контенту не знайдено.",
+    "manage_type_managers": "Менеджери типів",
+    "content_type_managers": "Менеджери типів контенту",
+    "content_type_managers_help": "Доступне лише Root призначення адміністративного плагіна, відповідального за кожен тип контенту.",
+    "back_to_content_types": "Назад до типів контенту",
+    "content_type": "Тип контенту",
+    "owner_plugin": "Плагін-власник",
+    "default_manager": "Типовий менеджер",
+    "current_manager": "Поточний менеджер",
+    "source": "Джерело",
+    "save_manager": "Зберегти менеджер",
+    "restore_default_manager": "Відновити значення з manifest",
+    "no_manager": "Без менеджера",
+    "no_owner": "Без власника",
+    "inactive": "неактивний",
+    "overridden": "Змінено вручну",
+    "from_manifest": "З manifest",
+    "saving_manager": "Збереження…",
+    "manager_saved": "Менеджер типу контенту збережений.",
+    "manager_reset": "Менеджер із manifest відновлений.",
+    "manager_save_failed": "Не вдалося зберегти менеджер типу контенту.",
+    "root_only": "Потрібен доступ Root.",
+    "content_type_not_found": "Тип контенту не знайдено.",
+    "invalid_manager": "Некоректний плагін-менеджер.",
+    "manager_not_found": "Плагін-менеджер не знайдений.",
+    "invalid_manager_mode": "Некоректний режим зміни менеджера.",
+    "content_type_access_denied": "Цим типом контенту керує інший плагін.",
+    "structure_editor_help": "Відредагуйте тип контенту та складіть його структуру з полів.",
+    "system_name": "Системна назва",
+    "title": "Назва",
+    "description": "Опис",
+    "parent_content_type": "Батьківський тип контенту",
+    "no_parent_type": "Без батьківського типу",
+    "title_field": "Поле назви",
+    "summary_field": "Поле короткого опису",
+    "has_slug": "Елементи мають slug",
+    "save_content_type": "Зберегти тип контенту",
+    "edit_content_type": "Редагувати тип контенту",
+    "content_type_saved": "Тип контенту збережено.",
+    "content_type_deleted": "Тип контенту видалено.",
+    "delete_content_type_failed": "Не вдалося видалити тип контенту.",
+    "invalid_type_data": "Потрібні системна назва та звичайна назва. Використовуйте малі латинські літери, цифри й підкреслення.",
+    "type_name_exists": "Тип контенту з такою системною назвою вже існує.",
+    "invalid_parent_type": "Некоректний батьківський тип контенту.",
+    "type_has_items": "Спочатку видаліть усі елементи цього типу.",
+    "type_has_children": "Цей тип контенту має дочірні типи.",
+    "declarative_structure_notice": "Цю структуру оголошено плагіном. Під час наступного оновлення плагіна ручні зміни можуть бути відновлені з install/structures.json.",
+    "fields": "Поля",
+    "fields_help": "Додавайте наявні поля, створюйте нові та змінюйте їхній порядок.",
+    "field": "Поле",
+    "existing_field": "Наявне поле",
+    "select_existing_field": "Оберіть поле…",
+    "attach_field": "Додати наявне поле",
+    "create_field": "Створити поле",
+    "edit_field": "Редагувати поле",
+    "save_field": "Зберегти поле",
+    "detach_field": "Прибрати зі структури",
+    "delete_field_globally": "Видалити поле повністю",
+    "confirm_detach_field": "Прибрати це поле зі структури? Його значення в елементах цього типу контенту буде остаточно видалено.",
+    "confirm_delete_field": "Видалити це поле повністю? Цю дію неможливо скасувати.",
+    "structure_operation_failed": "Не вдалося оновити структуру.",
+    "field_type": "Тип поля",
+    "order": "Порядок",
+    "move_up": "Перемістити вище",
+    "move_down": "Перемістити нижче",
+    "back_to_structure": "Назад до структури",
+    "field_editor_help": "Створіть глобальне визначення поля та налаштуйте його перше використання в цьому типі контенту.",
+    "field_usage_count": "Використовується у {count} типах контенту.",
+    "search_weight": "Вага пошуку",
+    "default_value": "Типове значення",
+    "field_options_json": "Опції select (JSON)",
+    "field_options_help": "Для полів select: масив об’єктів із ключами title та value.",
+    "field_type_parameters": "Параметри типу",
+    "field_parameter_placeholder": "Підказка",
+    "field_parameter_placeholder_help": "Текст, що відображається, поки поле порожнє.",
+    "field_parameter_min_length": "Мінімальна довжина",
+    "field_parameter_min_length_help": "Мінімально дозволена кількість символів.",
+    "field_parameter_max_length": "Максимальна довжина",
+    "field_parameter_max_length_help": "Максимально дозволена кількість символів.",
+    "field_parameter_rows": "Видимі рядки",
+    "field_parameter_rows_help": "Початкова видима висота багаторядкового редактора.",
+    "field_parameter_options": "Опції (JSON)",
+    "field_parameter_options_help": "Масив об’єктів із ключами title або label та value.",
+    "field_parameter_min": "Мінімальне значення",
+    "field_parameter_min_help": "Найменше дозволене числове значення.",
+    "field_parameter_max": "Максимальне значення",
+    "field_parameter_max_help": "Найбільше дозволене числове значення.",
+    "field_parameter_step": "Крок",
+    "field_parameter_step_help": "Дозволений крок між числовими значеннями.",
+    "field_parameter_content_types": "Дозволені типи контенту",
+    "field_parameter_content_types_help": "Типи контенту, елементи яких можна вибирати в цьому полі.",
+    "field_parameter_earliest": "Найраніше значення",
+    "field_parameter_earliest_help": "Найраніша дозволена дата або часткова дата у форматі поля.",
+    "field_parameter_latest": "Найпізніше значення",
+    "field_parameter_latest_help": "Найпізніша дозволена дата або часткова дата у форматі поля.",
+    "field_parameter_required": "Параметр {parameter} є обов’язковим.",
+    "invalid_field_parameter": "Некоректне значення параметра {parameter}.",
+    "invalid_field_parameter_json": "Параметр {parameter} має містити коректний JSON.",
+    "field_settings": "Налаштування поля",
+    "required": "Обов’язкове",
+    "indexed": "Індексоване",
+    "unique": "Унікальне",
+    "translatable": "Перекладне",
+    "multiple": "Кілька значень",
+    "hidden": "Приховане",
+    "readonly": "Лише читання",
+    "field_not_found": "Поле не знайдено.",
+    "invalid_field_data": "Потрібні системна назва та звичайна назва. Використовуйте малі латинські літери, цифри й підкреслення.",
+    "invalid_field_type": "Некоректний тип поля.",
+    "field_name_exists": "Поле з такою системною назвою вже існує.",
+    "invalid_field_options": "Опції поля мають бути коректним JSON-масивом.",
+    "field_identity_has_values": "Не можна змінити системну назву або тип поля, яке вже містить значення.",
+    "field_saved": "Поле збережено.",
+    "field_attached": "Поле додано до структури.",
+    "field_already_attached": "Це поле вже є у структурі.",
+    "field_detached": "Поле прибрано зі структури, а його значення для цього типу контенту видалено.",
+    "invalid_direction": "Некоректний напрямок.",
+    "field_still_in_use": "Поле входить до структури типу контенту, тому його не можна видалити.",
+    "field_deleted": "Поле видалено.",
+    "manual_default": "Створено вручну",
+    "field_not_in_structure": "Цього поля немає у поточній структурі.",
+    "field_identity_root_only": "Лише Root може перейменувати або змінити тип поля, спільного з іншим менеджером.",
+    "field_parameter_source_fields": "Поля-джерела підказок",
+    "field_parameter_source_fields_help": "Індексовані текстові поля, наявні значення яких пропонуються як підказки. Залиште порожнім, щоб використовувати саме це поле.",
+    "field_parameter_media_root": "Корінь медіа",
+    "field_parameter_media_root_help": "Необов’язкова підтeка Media, яка буде логічним коренем вибору.",
+    "field_parameter_media_accept": "Дозволені медіа",
+    "field_parameter_media_accept_help": "Необов’язкові MIME/розширення через кому для фільтра вибору, наприклад image/*,pdf.",
+    "field_type_requires_indexed": "Цей тип поля вимагає індексації.",
+    "autocomplete_source_invalid": "Поля-джерела автодоповнення мають бути індексованими текстовими полями.",
+    "multiple_boolean_not_supported": "Булеве поле не може містити кілька значень.",
+    "manage_fields": "Поля",
+    "field_definitions": "Поля",
+    "field_definitions_help": "Переглядайте й редагуйте глобальні визначення полів або видаляйте поля, які більше не використовуються.",
+    "search_fields": "Пошук полів…",
+    "field_count": "{count} полів",
+    "no_fields": "Полів не знайдено.",
+    "used_in": "Використовується в",
+    "field_unused": "Не використовується",
+    "stored_values": "Є значення",
+    "no_stored_values": "Немає значень",
+    "delete_field_failed": "Не вдалося видалити поле.",
+    "field_used_lock": "Перед видаленням приберіть це поле з усіх типів контенту.",
+    "field_values_lock": "Поле містить збережені значення, тому його не можна видалити.",
+    "confirm_delete_field_with_values": "Видалити \"{title}\" разом з усіма збереженими значеннями, що залишилися? Цю дію неможливо скасувати.",
+    "edit_global_field": "Редагувати глобальне поле",
+    "global_field_editor_help": "Ці параметри визначають поле глобально й впливають на всі типи контенту, де воно використовується.",
+    "field_attachment_editor_help": "Ці параметри діють лише для цього поля в поточному типі контенту. Залиште назву порожньою, щоб використовувати глобальну.",
+    "field_attachment_settings": "Параметри використання",
+    "global_field_settings": "Глобальні параметри поля",
+    "back_to_fields": "Назад до полів",
+    "global_field_saved": "Глобальне поле збережено."
+  },
+  "fields": {
+    "internal_title": {
+      "title": "Внутрішня назва",
+      "description": "Використовується лише для пошуку та розпізнавання цього матеріалу в адмінці."
+    },
+    "static_content_body": {
+      "title": "Контент",
+      "description": "Форматований вміст статичного блока."
+    },
+    "article_body": {
+      "title": "Текст статті",
+      "description": "Форматований вміст статті."
+    },
+    "static_item_template": {
+      "title": "Шаблон елемента",
+      "description": "Шаблон для виведення елемента статичного контенту.",
+      "options": {
+        "default": "За замовчуванням",
+        "container": "Контейнер",
+        "card": "Картка",
+        "compact": "Компактний"
+      }
+    },
+    "display_title": {
+      "title": "Заголовок",
+      "description": "Необов’язковий публічний заголовок блока."
+    },
+    "content_items_list": {
+      "title": "Елементи контенту",
+      "description": "Елементи контенту, що входять до цього блока."
+    },
+    "block_template": {
+      "title": "Шаблон блока",
+      "description": "Шаблон для виведення блока контенту.",
+      "options": {
+        "default": "За замовчуванням",
+        "card": "Картка",
+        "compact": "Компактний",
+        "responsive_grid": "Адаптивна сітка"
+      }
+    },
+    "max_items_per_row": {
+      "title": "Елементів у рядку",
+      "description": "Максимальна кількість елементів в одному рядку."
+    },
+    "min_item_width": {
+      "title": "Мінімальна ширина елемента",
+      "description": "Мінімальна ширина елемента в пікселях."
+    },
+    "published_at": {
+      "title": "Дата публікації",
+      "description": "Дата й час публікації статті."
+    },
+    "updated_at": {
+      "title": "Дата оновлення",
+      "description": "Дата й час останнього оновлення статті."
+    },
+    "summary": {
+      "title": "Короткий опис",
+      "description": "Короткий опис для списків і попереднього перегляду статей."
+    },
+    "article_preview": {
+      "title": "Обкладинка",
+      "description": ""
+    },
+    "tags": {
+      "title": "Теги",
+      "description": ""
+    }
+  }
+}

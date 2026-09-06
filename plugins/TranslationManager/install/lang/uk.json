@@ -1,0 +1,107 @@
+{
+  "plugin": {
+    "title": "Менеджер перекладів",
+    "description": "Керування перекладами системних сутностей і контенту."
+  },
+  "handlers": {
+    "manage": {
+      "title": "Керування",
+      "actions": {
+        "overview": {
+          "title": "Огляд"
+        },
+        "dictionaryEdit": {
+          "title": "Редагування системного словника"
+        },
+        "dictionaryTranslate": {
+          "title": "Перекласти системний словник"
+        },
+        "dictionarySave": {
+          "title": "Зберегти системний словник"
+        },
+        "systemList": {
+          "title": "Системні сутності"
+        },
+        "systemEdit": {
+          "title": "Редагування системного перекладу"
+        },
+        "systemTranslate": {
+          "title": "Перекласти системну сутність"
+        },
+        "systemSave": {
+          "title": "Зберегти системний переклад"
+        },
+        "contentList": {
+          "title": "Контент"
+        },
+        "contentEdit": {
+          "title": "Редагування перекладу контенту"
+        },
+        "contentTranslate": {
+          "title": "Перекласти контент"
+        },
+        "contentSave": {
+          "title": "Зберегти переклад контенту"
+        },
+        "batchTranslate": {
+          "title": "Пакетний переклад"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "system_entities": "Системні сутності",
+    "content": "Контент",
+    "source_language": "Мова оригіналу",
+    "target_language": "Мова перекладу",
+    "provider": "Провайдер",
+    "context": "Контекст",
+    "instructions": "Інструкції",
+    "translate": "Перекласти",
+    "save": "Зберегти",
+    "back_to_translations": "Назад до перекладів",
+    "back_to_plugins": "Назад до плагінів",
+    "back_to_themes": "Назад до тем",
+    "back_to_content_types": "Назад до типів контенту",
+    "back_to_field_types": "Назад до типів полів",
+    "back_to_fields": "Назад до полів",
+    "back_to_pages": "Назад до сторінок",
+    "back_to_theme_layouts": "Назад до макетів тем",
+    "back_to_content_items": "Назад до елементів контенту",
+    "load": "Завантажити",
+    "source": "Оригінал",
+    "translation": "Переклад",
+    "translation_ready": "Чернетка перекладу готова.",
+    "saved": "Переклад збережено.",
+    "no_source_translation": "Точного перекладу для мови-джерела немає.",
+    "translation_missing": "Переклад відсутній.",
+    "translation_updated_at": "Останнє оновлення:",
+    "translation_outdated": "Переклад може бути застарілим.",
+    "select_item": "Вибрати елемент",
+    "scope": "Обсяг",
+    "all_missing": "Усі відсутні",
+    "current_page": "Поточна сторінка",
+    "selected_items": "Вибрані елементи",
+    "translate_missing": "Перекласти відсутні",
+    "stop": "Зупинити",
+    "translated": "Перекладено полів",
+    "skipped": "Пропущено елементів",
+    "errors": "Помилки",
+    "batch_running": "Перекладаємо...",
+    "batch_done": "Готово.",
+    "batch_stopped": "Зупинено.",
+    "batch_stopping": "Зупиняємо...",
+    "batch_select_items": "Виберіть хоча б один елемент.",
+    "batch_languages_differ": "Мова оригіналу й перекладу мають відрізнятися.",
+    "system_dictionary": "Системний словник",
+    "phrase_key": "Ключ фрази",
+    "delete": "Видалити",
+    "delete_phrase": "Видалити фразу з усіх мов",
+    "new_phrase": "Нова фраза",
+    "dictionary_empty": "Системний словник порожній.",
+    "dictionary_saved": "Системний словник збережено.",
+    "dictionary_key_exists": "Такий ключ фрази вже існує.",
+    "dictionary_source_required": "Для нової фрази потрібен текст мовою оригіналу.",
+    "dictionary_key_invalid": "Ключі фраз мають містити лише малі латинські літери, цифри та підкреслення."
+  }
+}

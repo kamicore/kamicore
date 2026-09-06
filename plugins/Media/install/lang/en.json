@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "title": "Media",
+    "description": "Manage public media files."
+  },
+  "phrases": {
+    "media": "Media",
+    "media_help": "Browse and manage public files stored in Media.",
+    "upload": "Upload",
+    "new_folder": "New folder",
+    "refresh": "Refresh",
+    "select": "Select",
+    "cancel": "Cancel",
+    "copy_url": "Copy URL",
+    "rename": "Rename",
+    "move": "Move",
+    "delete": "Delete",
+    "empty_folder": "This folder is empty.",
+    "folder_name": "Folder name",
+    "destination": "Destination",
+    "confirm_delete": "Delete this item? Existing links may stop working.",
+    "files": "Files",
+    "folders": "Folders"
+  },
+  "field_types": {
+    "media": {
+      "title": "Media",
+      "description": "Public URL with optional selection from the Media browser."
+    }
+  }
+}

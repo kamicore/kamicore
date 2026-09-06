@@ -1,0 +1,233 @@
+:root {
+    color-scheme: light;
+}
+
+.install-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 85% 5%, rgba(96, 165, 250, 0.12), transparent 30rem),
+        var(--kc-bg-soft);
+}
+
+.install-shell {
+    width: min(100% - 32px, 980px);
+    margin: 0 auto;
+    padding: 48px 0 72px;
+}
+
+.install-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.install-logo {
+    width: 76px;
+    height: 76px;
+    flex: 0 0 auto;
+}
+
+.install-header h1 {
+    margin: 2px 0 6px;
+}
+
+.install-header p {
+    margin: 0;
+    color: var(--kc-ink-2);
+}
+
+.install-kicker {
+    color: var(--kc-primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.install-card {
+    margin-bottom: 20px;
+    padding: 28px;
+    border: 1px solid var(--kc-border);
+    border-radius: var(--kc-radius-lg);
+    background: var(--kc-bg);
+    box-shadow: 0 12px 36px rgba(15, 23, 42, 0.06);
+}
+
+.install-card h2 {
+    margin-top: 0;
+}
+
+.install-preflight {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.install-checks {
+    display: grid;
+    gap: 8px;
+}
+
+.install-check {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 10px;
+    border-radius: var(--kc-radius-sm);
+    background: var(--kc-bg-soft);
+    font-size: 14px;
+}
+
+.install-check span {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.install-check.is-ok span {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.install-check.is-error span {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.install-alert {
+    margin-bottom: 20px;
+    padding: 18px 20px;
+    border: 1px solid #fecaca;
+    border-left: 5px solid var(--kc-accent);
+    border-radius: var(--kc-radius-md);
+    background: #fff7f7;
+}
+
+.install-alert ul {
+    margin: 8px 0 0;
+    padding-left: 22px;
+}
+
+.install-section {
+    min-width: 0;
+    margin: 0;
+    padding: 24px 0 8px;
+    border: 0;
+    border-top: 1px solid var(--kc-border);
+}
+
+.install-section:first-of-type {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.install-section legend {
+    padding: 0 14px 0 0;
+    color: var(--kc-primary);
+    font-size: 20px;
+    font-weight: 650;
+}
+
+.install-section-note {
+    margin: -4px 0 18px;
+    color: var(--kc-ink-2);
+    font-size: 14px;
+}
+
+.install-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0 18px;
+    transition: opacity 160ms ease;
+}
+
+.install-grid.is-disabled {
+    opacity: 0.45;
+}
+
+.install-small-field {
+    max-width: 220px;
+}
+
+.install-wide-field {
+    grid-column: 1 / -1;
+}
+
+.install-muted {
+    color: var(--kc-ink-2);
+    font-weight: 400;
+}
+
+.install-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 22px;
+    border-top: 1px solid var(--kc-border);
+}
+
+.install-submit p {
+    margin: 0;
+    max-width: 620px;
+    color: var(--kc-ink-2);
+    font-size: 14px;
+}
+
+.install-result {
+    padding: 36px;
+}
+
+.install-status {
+    display: inline-flex;
+    margin-bottom: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.install-status-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.install-status-warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+@media (max-width: 720px) {
+    .install-shell {
+        padding-top: 28px;
+    }
+
+    .install-header,
+    .install-submit {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .install-preflight,
+    .install-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .install-small-field {
+        max-width: none;
+    }
+
+    .install-wide-field {
+        grid-column: auto;
+    }
+
+    .install-card {
+        padding: 22px;
+    }
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "TODO",
+      "name": "PageManager",
+      "title": "Page Manager",
+      "description": "Page Manager",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "pgm",
+    "version": "1.0.7",
+    "dependencies": [
+      "Forms"
+    ],
+    "config": {
+      "handlers": {
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "config": {
+              "title": "TODO"
+            },
+            "list": {
+              "title": "TODO"
+            },
+            "edit": {
+              "title": "TODO"
+            },
+            "save": {
+              "title": "TODO"
+            },
+            "delete": {
+              "title": "TODO"
+            },
+            "createPage": {
+              "title": "TODO"
+            },
+            "pluginContextForm": {
+              "title": "TODO"
+            },
+            "settings": {
+              "title": "TODO"
+            },
+            "pageLayoutData": {
+              "title": "Load page layout"
+            },
+            "domainPages": {
+              "title": "Load domain pages"
+            },
+            "deletePage": {
+              "title": "Delete page"
+            },
+            "createPageFromRecipe": {
+              "title": "Create page from recipe"
+            },
+            "recipes": {
+              "title": "Page recipes"
+            },
+            "recipeSave": {
+              "title": "Save page recipe"
+            },
+            "recipeDelete": {
+              "title": "Delete page recipe"
+            }
+          },
+          "default_action": "list"
+        }
+      },
+      "default_handler": "manage",
+      "default_language": "en"
+    },
+    "settings": {
+      "test": {
+        "title": "Some setting",
+        "description": "",
+        "type": "text",
+        "default": "-",
+        "global": 0
+      }
+    }
+  }
+}

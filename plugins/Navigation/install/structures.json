@@ -1,0 +1,183 @@
+{
+  "field_types": {},
+  "fields": {
+    "menu_key": {
+      "title": "Menu key",
+      "description": "Stable technical identifier used by recipes, plugins, and theme bindings.",
+      "type": "string",
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "menu_title": {
+      "title": "Menu name",
+      "description": "Readable administrative name for this menu.",
+      "type": "string",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": true
+      }
+    },
+    "menu_description": {
+      "title": "Menu description",
+      "description": "Administrative description of the menu.",
+      "type": "textarea",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": true
+      }
+    },
+    "visible_to_groups": {
+      "title": "Visible to groups",
+      "description": "User groups that can see this navigation element. Leave empty to show it to everyone.",
+      "type": "usergroup_id",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "item_type": {
+      "title": "Item type",
+      "description": "Defines how this menu item is rendered.",
+      "type": "select",
+      "options": [
+        {
+          "title": "Link",
+          "value": "link"
+        },
+        {
+          "title": "Heading",
+          "value": "heading"
+        },
+        {
+          "title": "Divider",
+          "value": "divider"
+        }
+      ],
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "item_title": {
+      "title": "Item title",
+      "description": "Visible label for links and headings.",
+      "type": "string",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": true
+      }
+    },
+    "item_url": {
+      "title": "URL",
+      "description": "Absolute or relative link target.",
+      "type": "string",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "item_icon": {
+      "title": "Icon",
+      "description": "Icon name used by compatible templates.",
+      "type": "string",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "displayorder": {
+      "title": "Display order",
+      "description": "Position of the item within its menu level.",
+      "type": "integer",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    }
+  },
+  "content_types": {
+    "navmenu": {
+      "title": "Menu",
+      "description": "Navigation menu.",
+      "title_field": "menu_title",
+      "summary_field": "menu_description",
+      "has_slug": false,
+      "schema": {
+        "fields": {
+          "menu_key": {
+            "displayorder": 1,
+            "settings": {
+              "required": true
+            }
+          },
+          "menu_title": {
+            "displayorder": 2,
+            "settings": {
+              "required": true
+            }
+          },
+          "menu_description": {
+            "displayorder": 3
+          },
+          "visible_to_groups": {
+            "displayorder": 4,
+            "settings": {
+              "multiple": true
+            }
+          }
+        }
+      },
+      "manager": "Navigation"
+    },
+    "navmenu_item": {
+      "title": "Menu item",
+      "description": "Navigation menu item.",
+      "title_field": "item_title",
+      "has_slug": false,
+      "schema": {
+        "fields": {
+          "item_type": {
+            "displayorder": 1,
+            "default": "link",
+            "settings": {
+              "required": true
+            }
+          },
+          "item_title": {
+            "displayorder": 2
+          },
+          "item_url": {
+            "displayorder": 3
+          },
+          "item_icon": {
+            "displayorder": 4
+          },
+          "visible_to_groups": {
+            "displayorder": 5,
+            "settings": {
+              "multiple": true
+            }
+          },
+          "displayorder": {
+            "displayorder": 6,
+            "settings": {
+              "hidden": true
+            }
+          }
+        }
+      },
+      "manager": "Navigation"
+    }
+  }
+}

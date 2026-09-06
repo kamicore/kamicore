@@ -1,0 +1,138 @@
+{
+  "plugin": {
+    "title": "User Profile",
+    "description": "Manage user profile data, credentials, and account preferences."
+  },
+  "content_types": {
+    "user_profile": {
+      "title": "Profile",
+      "description": "Public user profile data."
+    }
+  },
+  "settings": {
+    "profile_page_enabled": {
+      "title": "Profile page enabled",
+      "description": "Allows users to have a public profile page on this domain."
+    }
+  },
+  "handlers": {
+    "view": {
+      "title": "Display profile",
+      "actions": {
+        "profile_page": {
+          "title": "Profile page"
+        },
+        "statusbar": {
+          "title": "User status bar"
+        }
+      }
+    },
+    "account": {
+      "title": "Account",
+      "actions": {
+        "credentials": {
+          "title": "Credentials"
+        },
+        "change_username": {
+          "title": "Change username"
+        },
+        "change_email": {
+          "title": "Change email"
+        },
+        "change_password": {
+          "title": "Change password"
+        },
+        "remove_password": {
+          "title": "Remove password"
+        },
+        "disconnect_provider": {
+          "title": "Disconnect provider"
+        }
+      }
+    },
+    "manage": {
+      "title": "Manage profiles",
+      "actions": {
+        "config": {
+          "title": "Profile settings"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "profile": "Profile",
+    "credentials": "Credentials",
+    "preferences": "Preferences",
+    "display_name": "Display name",
+    "website": "Website",
+    "save_changes": "Save changes",
+    "profile_updated": "Your profile has been updated.",
+    "no_public_profile": "This user does not have a public profile.",
+    "guest": "Guest",
+    "welcome": "Welcome,",
+    "login": "Sign in",
+    "register": "Register",
+    "logout": "Log out",
+    "credentials_intro": "Manage the credentials and sign-in methods for your account.",
+    "username": "Username",
+    "username_help": "Letters, numbers, dots, underscores, and hyphens.",
+    "save": "Save",
+    "email": "Email address",
+    "email_change_help": "Your current address remains active until the new address is confirmed.",
+    "change_email": "Change email",
+    "verified": "Verified",
+    "not_verified": "Not verified",
+    "pending_email": "Pending verification",
+    "pending_email_help": "A confirmation link was sent to this address.",
+    "password": "Password",
+    "password_help": "Use a password as one of the available sign-in methods for this account.",
+    "configured": "Configured",
+    "not_configured": "Not configured",
+    "current_password": "Current password",
+    "new_password": "New password",
+    "repeat_password": "Repeat new password",
+    "change_password": "Change password",
+    "set_password": "Set password",
+    "remove_password": "Remove password",
+    "remove_password_help": "Password sign-in will be removed. Another sign-in method must remain connected.",
+    "sign_in_methods": "Sign-in methods",
+    "sign_in_methods_help": "Connect, replace, or disconnect external authentication providers.",
+    "connected": "Connected",
+    "not_connected": "Not connected",
+    "connect": "Connect",
+    "replace": "Replace",
+    "disconnect": "Disconnect",
+    "username_changed": "Username updated.",
+    "email_change_sent": "A confirmation link was sent to the new email address.",
+    "password_changed": "Password updated.",
+    "password_removed": "Password sign-in removed.",
+    "provider_disconnected": "Authentication provider disconnected.",
+    "credentials_load_failed": "Credentials could not be loaded.",
+    "credentials_action_failed": "The requested account change could not be completed.",
+    "username_required": "Enter a username.",
+    "username_invalid": "Invalid username format.",
+    "username_taken": "This username is already in use.",
+    "email_required": "Enter an email address.",
+    "email_invalid": "Enter a valid email address.",
+    "email_same": "The new email address is the same as the current address.",
+    "email_taken": "This email address is already in use.",
+    "password_required": "Enter a password.",
+    "password_short": "Password must be at least 8 characters long.",
+    "password_mismatch": "Passwords do not match.",
+    "current_password_invalid": "Current password is incorrect.",
+    "last_auth_method": "The last sign-in method cannot be removed.",
+    "provider_already_connected": "A Google account is already connected. Use Replace to change it.",
+    "provider_used_elsewhere": "This Google account is already connected to another user.",
+    "disconnect_confirm": "Disconnect this sign-in method?"
+  },
+  "fields": {
+    "displayname": {
+      "title": "Display name",
+      "description": "Public name displayed for the user."
+    },
+    "website_url": {
+      "title": "Website",
+      "description": "Public website URL."
+    }
+  }
+}

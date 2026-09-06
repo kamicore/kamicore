@@ -1,0 +1,28 @@
+{
+  "plugin": {
+    "title": "Value formatter",
+    "description": "Formats dates, numbers, and currency values using language-specific settings."
+  },
+  "settings": {
+    "date_format": {
+      "title": "Date format",
+      "description": "PHP date format used for date values."
+    },
+    "datetime_format": {
+      "title": "Date and time format",
+      "description": "PHP date format used for date and time values."
+    },
+    "decimal_separator": {
+      "title": "Decimal separator",
+      "description": "Character used between integer and decimal parts."
+    },
+    "thousands_separator": {
+      "title": "Thousands separator",
+      "description": "Character used to separate groups of thousands. Leave empty for no separator."
+    },
+    "currency_format": {
+      "title": "Currency format",
+      "description": "Currency output template. Use {{value}} for the formatted number and {{symbol}} for the currency symbol."
+    }
+  }
+}

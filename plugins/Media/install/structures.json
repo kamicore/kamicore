@@ -1,0 +1,25 @@
+{
+  "field_types": {
+    "media": {
+      "title": "Media",
+      "description": "Public URL with optional selection from the Media browser.",
+      "parent": "url",
+      "settings": {
+        "parameters": {
+          "root": {
+            "type": "string",
+            "title": "field_parameter_media_root",
+            "description": "field_parameter_media_root_help"
+          },
+          "accept": {
+            "type": "string",
+            "title": "field_parameter_media_accept",
+            "description": "field_parameter_media_accept_help"
+          }
+        }
+      }
+    }
+  },
+  "fields": {},
+  "content_types": {}
+}

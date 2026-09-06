@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "TODO",
+      "name": "ViewArticles",
+      "title": "Article viewer",
+      "description": "Display article lists and individual articles on the front end.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "articles",
+    "version": "1.0.8",
+    "dependencies": [
+      "Pagination",
+      "Formatter"
+    ],
+    "config": {
+      "handlers": {
+        "list": {
+          "title": "Article list",
+          "actions": {
+            "list": {
+              "title": "List articles"
+            }
+          },
+          "default_action": "list",
+          "instance_params": {
+            "articles_category_ids": {
+              "title": "Article categories",
+              "description": "Select which article categories to display. Leave empty to display articles from all categories.",
+              "type": "item_id",
+              "content_types": [
+                "article_category"
+              ],
+              "multiple": true,
+              "default": null
+            },
+            "items_per_page": {
+              "title": "Items per page",
+              "description": "Override the default number of articles displayed per page. Leave empty to use the plugin setting. Use 0 to display all articles.",
+              "type": "number",
+              "default": null
+            },
+            "show_pagination": {
+              "title": "Show pagination",
+              "description": "Display pagination controls for this article list.",
+              "type": "checkbox",
+              "default": true
+            }
+          }
+        },
+        "view": {
+          "title": "Single article",
+          "actions": {
+            "view": {
+              "title": "View article"
+            }
+          },
+          "default_action": "view",
+          "instance_params": {
+            "articles_category_ids": {
+              "title": "Article categories",
+              "description": "Select which article categories to display. Leave empty to display articles from all categories.",
+              "type": "item_id",
+              "content_types": [
+                "article_category"
+              ],
+              "multiple": true,
+              "default": null
+            },
+            "items_per_page": {
+              "title": "Items per page",
+              "description": "Override the default number of articles displayed per page. Leave empty to use the plugin setting. Use 0 to display all articles.",
+              "type": "number",
+              "default": null
+            },
+            "show_pagination": {
+              "title": "Show pagination",
+              "description": "Display pagination controls for this article list.",
+              "type": "checkbox",
+              "default": true
+            }
+          }
+        }
+      },
+      "default_handler": "list",
+      "default_language": "en"
+    },
+    "settings": {
+      "items_count_selector": {
+        "title": "Allow items per page selection",
+        "description": "Can users choose how many articles to display on a page?",
+        "type": "checkbox",
+        "default": false
+      },
+      "items_count_values": {
+        "title": "Items per page options",
+        "description": "Available numbers of articles per page. Use 0 to include an all-articles option.",
+        "type": "number",
+        "multiple": true,
+        "default": [
+          10,
+          20,
+          50,
+          0
+        ]
+      },
+      "default_count": {
+        "title": "Default items per page",
+        "description": "Default number of articles displayed per page.",
+        "type": "number",
+        "default": 20
+      }
+    }
+  }
+}

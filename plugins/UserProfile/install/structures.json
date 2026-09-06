@@ -1,0 +1,44 @@
+{
+  "field_types": {},
+  "fields": {
+    "displayname": {
+      "title": "Display name",
+      "description": "Public name displayed for the user.",
+      "type": "string",
+      "settings": {
+        "indexed": true,
+        "unique": true,
+        "translatable": false
+      }
+    },
+    "website_url": {
+      "title": "Website",
+      "description": "Public website URL.",
+      "type": "url",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    }
+  },
+  "content_types": {
+    "user_profile": {
+      "title": "Profile",
+      "description": "Public user profile data.",
+      "title_field": "displayname",
+      "has_slug": false,
+      "schema": {
+        "fields": {
+          "displayname": {
+            "displayorder": 1
+          },
+          "website_url": {
+            "displayorder": 2
+          }
+        }
+      },
+      "manager": "UserProfile"
+    }
+  }
+}

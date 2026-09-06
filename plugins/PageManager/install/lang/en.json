@@ -1,0 +1,139 @@
+{
+  "plugin": {
+    "title": "Page Manager",
+    "description": "Create pages, select layouts, and place plugins into page sections."
+  },
+  "settings": {
+    "test": {
+      "title": "Test setting",
+      "description": "Temporary setting used during development."
+    }
+  },
+  "handlers": {
+    "manage": {
+      "title": "Manage pages",
+      "actions": {
+        "config": {
+          "title": "Page settings"
+        },
+        "list": {
+          "title": "List pages"
+        },
+        "edit": {
+          "title": "Edit page"
+        },
+        "save": {
+          "title": "Save page"
+        },
+        "delete": {
+          "title": "Delete page"
+        },
+        "createPage": {
+          "title": "Create page"
+        },
+        "pluginContextForm": {
+          "title": "Plugin instance settings"
+        },
+        "settings": {
+          "title": "Page Manager settings"
+        },
+        "pageLayoutData": {
+          "title": "Load page layout"
+        },
+        "createPageFromRecipe": {
+          "title": "Create page from recipe"
+        },
+        "recipes": {
+          "title": "Page recipes"
+        },
+        "recipeSave": {
+          "title": "Save page recipe"
+        },
+        "recipeDelete": {
+          "title": "Delete page recipe"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "domain": "Domain",
+    "select_domain": "Select domain…",
+    "pages": "Pages",
+    "back_to_pages": "Back to pages",
+    "manage_domains": "Manage domains",
+    "title": "Title",
+    "slug": "Slug",
+    "description": "Description",
+    "layout": "Layout",
+    "parent_page": "Parent page",
+    "no_parent_page": "No parent page",
+    "invalid_parent_page": "The selected parent page is invalid.",
+    "parent_page_cycle": "A page cannot be placed under itself or one of its child pages.",
+    "actions": "Actions",
+    "create_page": "Create page",
+    "edit_page": "Edit page",
+    "delete_page": "Delete page",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "available_plugins": "Available plugins",
+    "head": "Head",
+    "top_section": "Top section",
+    "content": "Content",
+    "footer": "Footer",
+    "select_handler": "Select handler",
+    "plugin_settings_load_failed": "Failed to load plugin settings. Please try again.",
+    "no_pages": "No pages found.",
+    "add_page": "Add page",
+    "new_page_for": "New page for",
+    "select_domain_to_view_pages": "Select a domain to view its pages",
+    "no_domain_selected": "No domain selected",
+    "loading_pages": "Loading pages…",
+    "load_pages_failed": "Failed to load pages.",
+    "retry": "Retry",
+    "domain_unavailable": "Domain is not available.",
+    "delete_page_confirm": "Delete “{title}”? This action cannot be undone.",
+    "delete_page_failed": "Failed to delete the page.",
+    "page_count_one": "{count} page",
+    "page_count_few": "{count} pages",
+    "page_count_many": "{count} pages",
+    "page_count_other": "{count} pages",
+    "drag_plugins_help": "Drag a plugin into any available page zone.",
+    "drag_plugins_here": "Drag plugins here",
+    "layout_preview": "Page layout",
+    "layout_preview_help": "The zones below follow the structure of the selected layout.",
+    "save_page": "Save page",
+    "loading_layout": "Loading page layout…",
+    "layout_loaded": "Layout loaded",
+    "layout_load_failed": "Failed to load the page layout.",
+    "unknown_wrapper": "This zone is not declared by the layout.",
+    "unplaced_wrappers": "Unplaced wrappers",
+    "unplaced_wrappers_help": "These wrappers do not exist in the selected layout. Move anything you want to keep before saving; unplaced wrappers are removed when the page is saved.",
+    "plugin_settings": "Plugin settings",
+    "loading_plugin_settings": "Loading plugin settings…",
+    "remove_plugin": "Remove plugin",
+    "move_plugin": "Move plugin",
+    "page_saved": "Page saved.",
+    "page_recipes": "Page recipes",
+    "page_recipes_description": "Reusable page blueprints for layouts, standard plugin instances, and default navigation.",
+    "recipes": "Recipes",
+    "recipe": "Recipe",
+    "select_recipe": "Select recipe…",
+    "create_from_recipe": "From recipe",
+    "create_from_recipe_for": "New page from recipe for",
+    "recipe_key": "Recipe key",
+    "name": "Name",
+    "payload_json": "Payload JSON",
+    "edit_recipe": "Edit recipe",
+    "edit": "Edit",
+    "delete_recipe_confirm": "Delete this recipe?",
+    "no_recipes": "No recipes found.",
+    "recipe_page_prefix": "URL prefix: {prefix}",
+    "recipe_no_page_prefix": "No URL prefix",
+    "lifecycle_plugins_enable": "Enable lifecycle plugins",
+    "lifecycle_plugins_disable": "Disable lifecycle plugins",
+    "lifecycle_plugins_help": "Page-level overrides for plugins initialized outside wrappers.",
+    "lifecycle_plugins_conflict": "A lifecycle plugin cannot be both enabled and disabled for the same page.",
+    "invalid_layout": "The selected layout is not available for this domain."
+  }
+}

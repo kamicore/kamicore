@@ -1,0 +1,21 @@
+{
+  "plugin": {
+    "title": "Forms",
+    "description": "Server-side form and field rendering with template fallback."
+  },
+  "phrases": {
+    "submit": "Submit",
+    "add_value": "Add value",
+    "remove": "Remove",
+    "move_up": "Move up",
+    "move_down": "Move down",
+    "browse_media": "Browse Media",
+    "add_url": "Add URL"
+  },
+  "field_types": {
+    "autocomplete": {
+      "title": "Autocomplete",
+      "description": "Text value with suggestions collected from indexed text fields; new values are allowed."
+    }
+  }
+}

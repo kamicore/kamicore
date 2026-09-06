@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "TODO",
+      "name": "UserProfile",
+      "title": "User Profile",
+      "description": "User credentials, settings and profile page.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "profile",
+    "version": "1.0.8",
+    "dependencies": [
+      "UserAccount"
+    ],
+    "config": {
+      "handlers": {
+        "view": {
+          "title": "View",
+          "actions": {
+            "profile_page": {
+              "title": "TODO"
+            },
+            "statusbar": {
+              "title": "User status bar"
+            }
+          },
+          "default_action": "statusbar"
+        },
+        "account": {
+          "title": "Account",
+          "actions": {
+            "credentials": {
+              "title": "Credentials"
+            },
+            "change_username": {
+              "title": "Change username"
+            },
+            "change_email": {
+              "title": "Change email"
+            },
+            "change_password": {
+              "title": "Change password"
+            },
+            "remove_password": {
+              "title": "Remove password"
+            },
+            "disconnect_provider": {
+              "title": "Disconnect provider"
+            }
+          },
+          "default_action": "credentials"
+        },
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "config": {
+              "title": "TODO"
+            }
+          },
+          "default_action": "config"
+        }
+      },
+      "default_handler": "view",
+      "default_language": "en"
+    },
+    "settings": {
+      "profile_page_enabled": {
+        "title": "Profile page enabled",
+        "description": "",
+        "type": "checkbox",
+        "default": 1,
+        "global": 0
+      }
+    }
+  }
+}

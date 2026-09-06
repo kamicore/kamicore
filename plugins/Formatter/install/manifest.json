@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "caf329e2-72bd-4ec7-a6f4-cf78081af6e1",
+      "name": "Formatter",
+      "title": "Value formatter",
+      "description": "Formats dates, numbers, and currency values using language-specific settings.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "fmt",
+    "version": "1.0.0",
+    "dependencies": [],
+    "config": {
+      "default_language": "en"
+    },
+    "settings": {
+      "date_format": {
+        "title": "Date format",
+        "description": "PHP date format used for date values.",
+        "type": "string",
+        "translatable": true,
+        "global": 0,
+        "default": {
+          "en": "M j, Y",
+          "uk": "d.m.Y"
+        }
+      },
+      "datetime_format": {
+        "title": "Date and time format",
+        "description": "PHP date format used for date and time values.",
+        "type": "string",
+        "translatable": true,
+        "global": 0,
+        "default": {
+          "en": "M j, Y, H:i",
+          "uk": "d.m.Y, H:i"
+        }
+      },
+      "decimal_separator": {
+        "title": "Decimal separator",
+        "description": "Character used between integer and decimal parts.",
+        "type": "string",
+        "translatable": true,
+        "global": 0,
+        "default": {
+          "en": ".",
+          "uk": ","
+        }
+      },
+      "thousands_separator": {
+        "title": "Thousands separator",
+        "description": "Character used to separate groups of thousands. Leave empty for no separator.",
+        "type": "string",
+        "translatable": true,
+        "global": 0,
+        "default": {
+          "en": ",",
+          "uk": " "
+        }
+      },
+      "currency_format": {
+        "title": "Currency format",
+        "description": "Currency output template. Use {{value}} for the formatted number and {{symbol}} for the currency symbol.",
+        "type": "string",
+        "translatable": true,
+        "global": 0,
+        "default": {
+          "en": "{{symbol}}{{value}}",
+          "uk": "{{value}} {{symbol}}"
+        }
+      }
+    },
+    "min_kami_version": "1.0.0"
+  }
+}

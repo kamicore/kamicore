@@ -1,0 +1,107 @@
+{
+  "plugin": {
+    "title": "Translation manager",
+    "description": "Manage system and content translations."
+  },
+  "handlers": {
+    "manage": {
+      "title": "Manage",
+      "actions": {
+        "overview": {
+          "title": "Overview"
+        },
+        "dictionaryEdit": {
+          "title": "Edit system dictionary"
+        },
+        "dictionaryTranslate": {
+          "title": "Translate system dictionary"
+        },
+        "dictionarySave": {
+          "title": "Save system dictionary"
+        },
+        "systemList": {
+          "title": "System entities"
+        },
+        "systemEdit": {
+          "title": "Edit system translation"
+        },
+        "systemTranslate": {
+          "title": "Translate system entity"
+        },
+        "systemSave": {
+          "title": "Save system translation"
+        },
+        "contentList": {
+          "title": "Content"
+        },
+        "contentEdit": {
+          "title": "Edit content translation"
+        },
+        "contentTranslate": {
+          "title": "Translate content"
+        },
+        "contentSave": {
+          "title": "Save content translation"
+        },
+        "batchTranslate": {
+          "title": "Batch translate"
+        }
+      }
+    }
+  },
+  "phrases": {
+    "system_entities": "System entities",
+    "content": "Content",
+    "source_language": "Source language",
+    "target_language": "Target language",
+    "provider": "Provider",
+    "context": "Context",
+    "instructions": "Instructions",
+    "translate": "Translate",
+    "save": "Save",
+    "back_to_translations": "Back to translations",
+    "back_to_plugins": "Back to plugins",
+    "back_to_themes": "Back to themes",
+    "back_to_content_types": "Back to content types",
+    "back_to_field_types": "Back to field types",
+    "back_to_fields": "Back to fields",
+    "back_to_pages": "Back to pages",
+    "back_to_theme_layouts": "Back to theme layouts",
+    "back_to_content_items": "Back to content items",
+    "load": "Load",
+    "source": "Source",
+    "translation": "Translation",
+    "translation_ready": "Translation draft is ready.",
+    "saved": "Translation saved.",
+    "no_source_translation": "No exact source translation is available.",
+    "translation_missing": "Translation is missing.",
+    "translation_updated_at": "Last updated:",
+    "translation_outdated": "Translation may be outdated.",
+    "select_item": "Select item",
+    "scope": "Scope",
+    "all_missing": "All missing",
+    "current_page": "Current page",
+    "selected_items": "Selected items",
+    "translate_missing": "Translate missing",
+    "stop": "Stop",
+    "translated": "Translated fields",
+    "skipped": "Skipped items",
+    "errors": "Errors",
+    "batch_running": "Translating...",
+    "batch_done": "Done.",
+    "batch_stopped": "Stopped.",
+    "batch_stopping": "Stopping...",
+    "batch_select_items": "Select at least one item.",
+    "batch_languages_differ": "Source and target languages must be different.",
+    "system_dictionary": "System dictionary",
+    "phrase_key": "Phrase key",
+    "delete": "Delete",
+    "delete_phrase": "Delete phrase from all languages",
+    "new_phrase": "New phrase",
+    "dictionary_empty": "The system dictionary is empty.",
+    "dictionary_saved": "System dictionary saved.",
+    "dictionary_key_exists": "This phrase key already exists.",
+    "dictionary_source_required": "Source text is required for a new phrase.",
+    "dictionary_key_invalid": "Phrase keys must use lowercase Latin letters, digits and underscores."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "presets": {
+    "standard": {
+      "pages": [
+        {
+          "system_name": "media",
+          "title": "Media",
+          "titles": {
+            "uk": "Медіа"
+          },
+          "slug": "media",
+          "recipe_name": "admin",
+          "wrappers": {
+            "content_middle": [
+              {
+                "handler": "view",
+                "instance_params": {}
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

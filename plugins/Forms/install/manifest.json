@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "1241eab1-da3b-47bf-a237-587f7970e062",
+      "name": "Forms",
+      "title": "Forms",
+      "description": "Minimal server-side form rendering plugin.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "form",
+    "version": "1.2.0",
+    "dependencies": [],
+    "config": {
+      "handlers": {
+        "view": {
+          "title": "View",
+          "actions": {
+            "entityOptions": {
+              "title": "Load system entity options"
+            },
+            "autocompleteOptions": {
+              "title": "Load autocomplete suggestions"
+            }
+          },
+          "default_action": "entityOptions"
+        }
+      },
+      "default_handler": "view",
+      "default_language": "en"
+    },
+    "settings": {}
+  }
+}

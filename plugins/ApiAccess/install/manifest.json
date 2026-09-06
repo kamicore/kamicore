@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "016b78c1-25cb-4ca6-8c55-80f0bd62db49",
+      "name": "ApiAccess",
+      "title": "API Access",
+      "description": "Manage personal API access tokens.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "aa",
+    "version": "1.0.0",
+    "dependencies": [
+      "Forms"
+    ],
+    "config": {
+      "handlers": {
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "tokenList": {
+              "title": "List API tokens"
+            },
+            "tokenEdit": {
+              "title": "Edit API token"
+            },
+            "tokenSave": {
+              "title": "Save API token"
+            },
+            "tokenDisable": {
+              "title": "Disable API token"
+            },
+            "tokenEnable": {
+              "title": "Enable API token"
+            },
+            "tokenRevoke": {
+              "title": "Revoke API token"
+            },
+            "tokenDelete": {
+              "title": "Delete API token"
+            }
+          },
+          "default_action": "tokenList"
+        }
+      },
+      "default_handler": "manage",
+      "default_language": "en"
+    },
+    "settings": {},
+    "min_kami_version": "1.0.0"
+  }
+}

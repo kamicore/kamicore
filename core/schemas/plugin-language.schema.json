@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kamicore.org/schemas/plugin-language.schema.json",
+  "title": "Kami plugin language file",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "plugin"
+  ],
+  "properties": {
+    "plugin": {
+      "$ref": "#/$defs/packageMetadata"
+    },
+    "content_types": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/contentType"
+      }
+    },
+    "settings": {
+      "$ref": "#/$defs/metadataMap"
+    },
+    "handlers": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/handler"
+      }
+    },
+    "phrases": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "packageMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "placeholder": {
+          "type": "string"
+        },
+        "options": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "metadataMap": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/metadata"
+      }
+    },
+    "handler": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "actions": {
+          "$ref": "#/$defs/metadataMap"
+        },
+        "instance_params": {
+          "$ref": "#/$defs/metadataMap"
+        }
+      }
+    },
+    "contentType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "fields": {
+          "$ref": "#/$defs/metadataMap"
+        }
+      }
+    }
+  }
+}

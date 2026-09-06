@@ -1,0 +1,119 @@
+{
+    "schema_version": "1.0",
+    "type": "plugin",
+    "data": {
+        "info": {
+            "uuid": "2d83b791-abfd-46fa-88db-221c7243a4f1",
+            "name": "Mailer",
+            "title": "Mailer",
+            "description": "Provides email message composition and delivery for other plugins.",
+            "origin_type": "local",
+            "origin_ref": null,
+            "author": "Kami team"
+        },
+        "prefix": "mail",
+        "version": "1.0.0",
+        "dependencies": [],
+        "config": {
+            "default_language": "en"
+        },
+        "settings": {
+            "mailer": {
+                "title": "Mail transport",
+                "description": "Transport used to deliver messages.",
+                "type": "select",
+                "options": [
+                    {
+                        "title": "SMTP",
+                        "value": "smtp"
+                    },
+                    {
+                        "title": "PHP mail()",
+                        "value": "mail"
+                    },
+                    {
+                        "title": "Sendmail",
+                        "value": "sendmail"
+                    }
+                ],
+                "default": "smtp",
+                "global": 0
+            },
+            "host": {
+                "title": "SMTP host",
+                "type": "string",
+                "default": "",
+                "global": 0
+            },
+            "port": {
+                "title": "SMTP port",
+                "type": "integer",
+                "default": 587,
+                "global": 0
+            },
+            "username": {
+                "title": "SMTP username",
+                "type": "string",
+                "default": "",
+                "global": 0
+            },
+            "encryption": {
+                "title": "SMTP encryption",
+                "type": "select",
+                "options": [
+                    {
+                        "title": "None",
+                        "value": ""
+                    },
+                    {
+                        "title": "TLS",
+                        "value": "tls"
+                    },
+                    {
+                        "title": "SSL",
+                        "value": "ssl"
+                    }
+                ],
+                "default": "tls",
+                "global": 0
+            },
+            "from_email": {
+                "title": "From email",
+                "type": "email",
+                "default": "",
+                "global": 0
+            },
+            "from_name": {
+                "title": "From name",
+                "type": "string",
+                "default": "",
+                "global": 0
+            },
+            "reply_to_email": {
+                "title": "Reply-to email",
+                "type": "email",
+                "default": "",
+                "global": 0
+            },
+            "reply_to_name": {
+                "title": "Reply-to name",
+                "type": "string",
+                "default": "",
+                "global": 0
+            },
+            "charset": {
+                "title": "Character set",
+                "type": "string",
+                "default": "UTF-8",
+                "global": 1
+            },
+            "timeout": {
+                "title": "Connection timeout",
+                "description": "Timeout in seconds for the mail transport.",
+                "type": "integer",
+                "default": 15,
+                "global": 1
+            }
+        }
+    }
+}

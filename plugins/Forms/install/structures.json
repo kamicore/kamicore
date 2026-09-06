@@ -1,0 +1,25 @@
+{
+  "field_types": {
+    "autocomplete": {
+      "title": "Autocomplete",
+      "description": "Text value with suggestions collected from indexed text fields; new values are allowed.",
+      "parent": "string",
+      "settings": {
+        "requires_indexed": true,
+        "parameters": {
+          "source_fields": {
+            "type": "field_id",
+            "value": "system_name",
+            "multiple": true,
+            "required": false,
+            "title": "field_parameter_source_fields",
+            "description": "field_parameter_source_fields_help",
+            "default": []
+          }
+        }
+      }
+    }
+  },
+  "fields": {},
+  "content_types": {}
+}

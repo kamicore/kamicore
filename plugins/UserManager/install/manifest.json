@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "3b47fd2b-1227-4bb1-a960-f1ef114b2e87",
+      "name": "UserManager",
+      "title": "Users and access",
+      "description": "Manage users, groups and access control.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "um",
+    "version": "0.1.2",
+    "dependencies": [
+      "Forms"
+    ],
+    "config": {
+      "handlers": {
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "overview": {
+              "title": "Users and access"
+            },
+            "users": {
+              "title": "Users"
+            },
+            "userEdit": {
+              "title": "Edit user"
+            },
+            "userSave": {
+              "title": "Save user"
+            },
+            "groups": {
+              "title": "Groups"
+            },
+            "groupEdit": {
+              "title": "Edit group"
+            },
+            "groupSave": {
+              "title": "Save group"
+            },
+            "groupDelete": {
+              "title": "Delete group"
+            },
+            "acl": {
+              "title": "Permissions"
+            },
+            "aclSave": {
+              "title": "Save permissions"
+            }
+          },
+          "default_action": "overview"
+        }
+      },
+      "default_handler": "manage",
+      "default_language": "en"
+    },
+    "settings": {},
+    "min_kami_version": "1.0.0"
+  }
+}

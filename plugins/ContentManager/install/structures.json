@@ -1,0 +1,404 @@
+{
+  "field_types": {},
+  "fields": {
+    "internal_title": {
+      "title": "Internal title",
+      "description": "Used only to identify this content item in the administration interface.",
+      "type": "string",
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "static_content_body": {
+      "title": "Content",
+      "description": "Formatted content of the static block.",
+      "type": "richtext",
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": true
+      }
+    },
+    "static_item_template": {
+      "title": "Item template",
+      "description": "Template used to render the static content item.",
+      "type": "select",
+      "options": [
+        {
+          "title": "Default",
+          "value": "default"
+        },
+        {
+          "title": "Container",
+          "value": "container"
+        },
+        {
+          "title": "Card",
+          "value": "card"
+        },
+        {
+          "title": "Compact",
+          "value": "compact"
+        }
+      ],
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "display_title": {
+      "title": "Display title",
+      "description": "Optional public title displayed with the content block.",
+      "type": "string",
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": true
+      }
+    },
+    "content_items_list": {
+      "title": "Content items",
+      "description": "Content items included in this block.",
+      "type": "item_id",
+      "params": {
+        "content_types": [
+          "static_content"
+        ]
+      },
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "block_template": {
+      "title": "Block template",
+      "description": "Template used to render the content block.",
+      "type": "select",
+      "options": [
+        {
+          "title": "Default",
+          "value": "default"
+        },
+        {
+          "title": "Card",
+          "value": "card"
+        },
+        {
+          "title": "Compact",
+          "value": "compact"
+        },
+        {
+          "title": "Responsive grid",
+          "value": "responsive_grid"
+        }
+      ],
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "max_items_per_row": {
+      "title": "Items per row",
+      "description": "Maximum number of items in one row.",
+      "type": "integer",
+      "params": {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "min_item_width": {
+      "title": "Minimum item width",
+      "description": "Minimum item width in pixels.",
+      "type": "integer",
+      "params": {
+        "min": 10,
+        "max": 5000,
+        "step": 10
+      },
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "published_at": {
+      "title": "Published at",
+      "description": "Date and time when the article was published.",
+      "type": "datetime",
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "updated_at": {
+      "title": "Updated at",
+      "description": "Date and time of the latest article update.",
+      "type": "datetime",
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "summary": {
+      "title": "Summary",
+      "description": "Short summary displayed in article lists and previews.",
+      "type": "textarea",
+      "params": {
+        "rows": 6
+      },
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": true
+      }
+    },
+    "article_body": {
+      "title": "Article body",
+      "description": "Formatted article content.",
+      "type": "richtext",
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": true
+      }
+    },
+    "article_preview": {
+      "title": "Article preview",
+      "type": "media",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "article_categories": {
+      "title": "Article categories",
+      "description": "",
+      "type": "item_id",
+      "params": {
+        "content_types": [
+          "article_category"
+        ]
+      },
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "article_primary_category": {
+      "title": "Primary category",
+      "description": "",
+      "type": "item_id",
+      "params": {
+        "content_types": [
+          "article_category"
+        ]
+      },
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "tags": {
+      "title": "Tags",
+      "description": "",
+      "type": "autocomplete",
+      "params": {
+        "source_fields": [
+          "tags"
+        ]
+      },
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": true
+      }
+    },
+    "related_items": {
+      "title": "Related items",
+      "description": "",
+      "type": "item_id",
+      "params": {
+        "content_types": [
+          "article",
+          "card"
+        ]
+      },
+      "settings": {
+        "indexed": true,
+        "unique": false,
+        "translatable": false
+      }
+    },
+    "category_page": {
+      "title": "Category page",
+      "description": "Page used to display this category and its articles.",
+      "type": "page_id",
+      "settings": {
+        "indexed": false,
+        "unique": false,
+        "translatable": false
+      }
+    }
+  },
+  "content_types": {
+    "static_content": {
+      "title": "Static content",
+      "description": "Reusable static content block.",
+      "title_field": "internal_title",
+      "has_slug": false,
+      "schema": {
+        "fields": {
+          "internal_title": {
+            "displayorder": 1,
+            "settings": {
+              "required": true
+            }
+          },
+          "static_content_body": {
+            "displayorder": 2,
+            "legacy_names": [
+              "content"
+            ],
+            "settings": {
+              "required": true
+            }
+          },
+          "static_item_template": {
+            "displayorder": 3,
+            "default": "default"
+          }
+        }
+      },
+      "manager": "ContentManager"
+    },
+    "static_content_block": {
+      "title": "Static content block",
+      "description": "Wrapper for several content items.",
+      "title_field": "internal_title",
+      "has_slug": false,
+      "schema": {
+        "fields": {
+          "internal_title": {
+            "displayorder": 1,
+            "settings": {
+              "required": true
+            }
+          },
+          "display_title": {
+            "displayorder": 2
+          },
+          "content_items_list": {
+            "displayorder": 3,
+            "settings": {
+              "multiple": true
+            }
+          },
+          "block_template": {
+            "displayorder": 4,
+            "default": "default"
+          },
+          "max_items_per_row": {
+            "displayorder": 5,
+            "default": "4"
+          },
+          "min_item_width": {
+            "displayorder": 6,
+            "default": "240"
+          }
+        }
+      },
+      "manager": "ContentManager"
+    },
+    "article": {
+      "title": "Article",
+      "description": "Basic publishable article.",
+      "title_field": "display_title",
+      "has_slug": true,
+      "schema": {
+        "fields": {
+          "display_title": {
+            "displayorder": 1
+          },
+          "article_categories": {
+            "displayorder": 2,
+            "settings": {
+              "multiple": true
+            }
+          },
+          "article_primary_category": {
+            "displayorder": 3
+          },
+          "published_at": {
+            "displayorder": 4
+          },
+          "updated_at": {
+            "displayorder": 5
+          },
+          "summary": {
+            "displayorder": 6
+          },
+          "article_body": {
+            "displayorder": 7,
+            "search_weight": "C",
+            "settings": {
+              "required": true
+            }
+          },
+          "article_preview": {
+            "displayorder": 8
+          },
+          "tags": {
+            "displayorder": 9,
+            "settings": {
+              "multiple": true
+            }
+          },
+          "related_items": {
+            "displayorder": 10,
+            "settings": {
+              "multiple": true
+            }
+          }
+        }
+      },
+      "manager": "ContentManager"
+    },
+    "article_category": {
+      "title": "Article category",
+      "description": "",
+      "title_field": "display_title",
+      "summary_field": "summary",
+      "has_slug": false,
+      "schema": {
+        "fields": {
+          "display_title": {
+            "displayorder": 1
+          },
+          "summary": {
+            "displayorder": 2
+          },
+          "category_page": {
+            "displayorder": 3
+          }
+        }
+      },
+      "manager": "ContentManager"
+    }
+  }
+}

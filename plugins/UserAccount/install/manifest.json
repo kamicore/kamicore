@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "uuid": "TODO",
+      "name": "UserAccount",
+      "title": "User Account",
+      "description": "User registration, authentication, credential management, and account-related actions.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "account",
+    "version": "1.0.30",
+    "dependencies": [],
+    "config": {
+      "handlers": {
+        "view": {
+          "title": "View",
+          "actions": {
+            "loginform": {
+              "title": "TODO"
+            },
+            "login": {
+              "title": "Sign in"
+            },
+            "register": {
+              "title": "Register"
+            },
+            "resend_verification": {
+              "title": "Resend verification email"
+            },
+            "request_password_reset": {
+              "title": "Request password reset"
+            },
+            "reset_password": {
+              "title": "Reset password"
+            }
+          },
+          "default_action": "loginform"
+        },
+        "manage": {
+          "title": "Manage",
+          "actions": {
+            "config": {
+              "title": "TODO"
+            }
+          },
+          "default_action": "config"
+        }
+      },
+      "default_handler": "view",
+      "default_language": "en"
+    },
+    "settings": {
+      "sso_authentication": {
+        "title": "SSO authentication",
+        "description": "Allows users to authenticate through the main domain using single sign-on.",
+        "type": "checkbox",
+        "default": 1,
+        "global": 0
+      },
+      "registration_enabled": {
+        "title": "Registration enabled",
+        "description": "Allows new users to register on this domain.",
+        "type": "checkbox",
+        "default": 1,
+        "global": 0
+      },
+      "two_factor_auth": {
+        "title": "Two-factor authentication",
+        "description": "Enables two-factor authentication for supported login flows.",
+        "type": "checkbox",
+        "default": 1,
+        "global": 1
+      },
+      "login_action": {
+        "title": "Action after login",
+        "description": "Defines what happens after a successful login.",
+        "type": "select",
+        "options": [
+          {
+            "title": "Reload current page",
+            "value": "reload"
+          },
+          {
+            "title": "Do nothing",
+            "value": "nothing"
+          },
+          {
+            "title": "Redirect to URL",
+            "value": "redirect"
+          }
+        ],
+        "default": "reload",
+        "global": 0
+      },
+      "email_activation": {
+        "title": "Email activation required",
+        "description": "Requires email verification for users who register with email and password.",
+        "type": "checkbox",
+        "default": 1,
+        "global": 1
+      },
+      "admin_activation_required": {
+        "title": "Administrator activation required",
+        "description": "Keeps newly registered accounts inactive until an administrator activates them.",
+        "type": "checkbox",
+        "default": 0,
+        "global": 1
+      },
+      "redirect_page": {
+        "title": "Redirect page URL",
+        "description": "The URL to redirect the user to after login when the redirect action is selected.",
+        "type": "url",
+        "default": "/",
+        "global": 0
+      }
+    },
+    "endpoints": {
+      "auth": "routeAuth"
+    }
+  }
+}

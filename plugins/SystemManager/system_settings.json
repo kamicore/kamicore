@@ -1,0 +1,102 @@
+{
+  "usergroup_root": {
+    "scope": "global",
+    "type": "usergroup",
+    "title": "Root user group",
+    "default": 1
+  },
+  "usergroup_guest": {
+    "scope": "global",
+    "type": "usergroup",
+    "title": "Guest user group",
+    "default": 3
+  },
+  "session_timeout": {
+    "scope": "global_domain",
+    "type": "integer",
+    "title": "Session timeout",
+    "default": 14400,
+    "min": 60
+  },
+  "default_timezone": {
+    "scope": "global_domain",
+    "type": "timezone",
+    "title": "Default timezone",
+    "default": "UTC"
+  },
+  "cache_enabled": {
+    "scope": "global_domain",
+    "type": "boolean",
+    "title": "Application cache",
+    "default": true
+  },
+  "cache_ttl": {
+    "scope": "global_domain",
+    "type": "integer",
+    "title": "Default cache TTL",
+    "default": 300,
+    "min": 1
+  },
+  "lifecycle_plugins": {
+    "scope": "global_domain",
+    "type": "plugin_id",
+    "title": "Lifecycle plugins",
+    "description": "Plugins initialized for every page request even when they are not used by a wrapper.",
+    "multiple": true,
+    "default": []
+  },
+  "usergroup_default": {
+    "scope": "global",
+    "type": "usergroup",
+    "title": "Default user group",
+    "default": 2
+  },
+  "languages": {
+    "scope": "domain",
+    "type": "languages",
+    "title": "Enabled languages",
+    "default": [
+      "en"
+    ]
+  },
+  "default_language": {
+    "scope": "domain",
+    "type": "language",
+    "title": "Default language",
+    "default": "en"
+  },
+  "system_css": {
+    "scope": "global",
+    "type": "string",
+    "title": "System CSS",
+    "description": "Stylesheets exposed to themes through the system_css template parameter.",
+    "multiple": true,
+    "default": [
+      "/assets/css/system.css",
+      "/assets/vendor/tom-select/tom-select.css",
+      "/assets/admin/css/admin.css"
+    ]
+  },
+  "system_js": {
+    "scope": "global",
+    "type": "string",
+    "title": "System JavaScript",
+    "description": "JavaScript files exposed to themes through the system_js template parameter.",
+    "multiple": true,
+    "default": [
+      "/assets/js/icons.js",
+      "/assets/js/common.js",
+      "/assets/vendor/tom-select/tom-select.complete.js",
+      "/assets/admin/js/common.js",
+      "/assets/js/tom-select-init.js"
+    ]
+  },
+  "system_custom_code": {
+    "scope": "global",
+    "type": "textarea",
+    "title": "System custom code",
+    "description": "Trusted raw HTML exposed to themes through the system_custom_code template parameter.",
+    "default": "",
+    "rows": 10
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "type": "plugin",
+  "data": {
+    "info": {
+      "name": "TextProcessor",
+      "title": "Text processor",
+      "description": "Provides a common API for external text processing providers.",
+      "origin_type": "local",
+      "origin_ref": null,
+      "author": "Kami team"
+    },
+    "prefix": "text",
+    "version": "1.0.0",
+    "dependencies": [],
+    "config": {},
+    "settings": {}
+  }
+}
