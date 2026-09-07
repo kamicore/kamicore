@@ -14,6 +14,10 @@
           <td class="admin-actions-cell"><a class="admin-button admin-button-action" href="{{settings_url}}">{{phrase.open}}</a></td>
         </tr>
         <tr>
+          <td><strong>{{phrase.languages}}</strong><div class="admin-page-description">{{phrase.languages_help}}</div></td>
+          <td class="admin-actions-cell"><a class="admin-button admin-button-action" href="{{languages_url}}">{{phrase.open}}</a></td>
+        </tr>
+        <tr>
           <td><strong>{{phrase.domains}}</strong><div class="admin-page-description">{{phrase.domains_help}}</div></td>
           <td class="admin-actions-cell"><a class="admin-button admin-button-action" href="{{domains_url}}">{{phrase.open}}</a></td>
         </tr>
@@ -54,6 +58,43 @@
   {{field}}
   <p class="admin-panel-description">{{description}}</p>
 </div>
+<!-- /kami:template -->
+
+<!-- kami:template languages -->
+<div class="admin-page">
+  <header class="admin-page-header">
+    <div>
+      <a class="admin-back-link" href="{{back_url}}"><svg class="icon icon-chevron-left icon-sm" aria-hidden="true"></svg><span>{{phrase.back_to_system}}</span></a>
+      <h2 class="admin-page-title">{{phrase.languages}}</h2>
+      <p class="admin-page-description">{{phrase.languages_help}}</p>
+    </div>
+  </header>
+  {{notice}}
+  <form method="post" action="{{save_url}}" class="admin-form">
+    <div class="admin-table-wrap">
+      <table class="admin-table admin-table-wide">
+        <thead><tr><th>{{phrase.language}}</th><th>{{phrase.code}}</th><th>{{phrase.active}}</th><th>{{phrase.used_by_domains}}</th></tr></thead>
+        <tbody>{{language_rows}}</tbody>
+      </table>
+    </div>
+    <footer class="admin-form-actions" style="padding:16px 20px 20px">
+      <a class="admin-button admin-button-secondary" href="{{back_url}}">{{phrase.cancel}}</a>
+      <button class="admin-button admin-button-primary" type="submit">{{phrase.save}}</button>
+    </footer>
+  </form>
+</div>
+<!-- /kami:template -->
+
+<!-- kami:template language-row -->
+<tr>
+  <td><strong>{{language_name}}</strong></td>
+  <td><code>{{language_code}}</code></td>
+  <td>
+    {{required_value}}
+    <input type="checkbox" name="active_languages[]" value="{{language_code}}"{{checked}}{{disabled}}>
+  </td>
+  <td>{{used_by}}</td>
+</tr>
 <!-- /kami:template -->
 
 <!-- kami:template domains -->

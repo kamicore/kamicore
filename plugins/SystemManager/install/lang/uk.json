@@ -8,6 +8,13 @@
     "system_help": "Налаштування інсталяції та конфігурація сайтів.",
     "system_settings": "Системні налаштування",
     "system_settings_help": "Глобальні значення інсталяції Kami. Параметри з оверрайдом можна змінювати окремо для кожного домену.",
+    "languages": "Мови",
+    "languages_help": "Обери мови, які можуть використовувати сайти цієї інсталяції Kami.",
+    "language": "Мова",
+    "code": "Код",
+    "active": "Активна",
+    "used_by_domains": "Використовується доменами",
+    "languages_saved": "Системні мови збережено.",
     "domains": "Домени",
     "domains_help": "Керування сайтами, їхніми aliases і доменними налаштуваннями.",
     "secrets": "Секрети",
@@ -66,12 +73,12 @@
     "setting_default_language": "Мова за замовчуванням",
     "setting_default_language_help": "Основна мова домену, якщо іншу явно не вибрано.",
     "setting_lifecycle_plugins": "Lifecycle-плагіни",
-    "setting_lifecycle_plugins_help": "Плагіни, які ініціалізуються для кожного запиту сторінки, навіть якщо вони не використовуються у wrapper."
-  },
-  "setting_system_css": "Системні CSS",
-  "setting_system_css_help": "Таблиці стилів для параметра шаблону system_css. Один шлях на елемент, порядок зберігається.",
-  "setting_system_js": "Системні JavaScript",
-  "setting_system_js_help": "JavaScript-файли для параметра шаблону system_js. Один шлях на елемент, порядок зберігається.",
-  "setting_system_custom_code": "Довільний системний код",
-  "setting_system_custom_code_help": "Довільний trusted HTML для параметра шаблону system_custom_code. Теги script дозволені."
+    "setting_lifecycle_plugins_help": "Плагіни, які ініціалізуються для кожного запиту сторінки, навіть якщо вони не використовуються у wrapper.",
+    "setting_system_css": "Системні CSS",
+    "setting_system_css_help": "Таблиці стилів для параметра шаблону system_css. Один шлях на елемент, порядок зберігається.",
+    "setting_system_js": "Системні JavaScript",
+    "setting_system_js_help": "JavaScript-файли для параметра шаблону system_js. Один шлях на елемент, порядок зберігається.",
+    "setting_system_custom_code": "Довільний системний код",
+    "setting_system_custom_code_help": "Довільний trusted HTML для параметра шаблону system_custom_code. Теги script дозволені."
+  }
 }

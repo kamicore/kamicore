@@ -19,6 +19,7 @@ final class SystemManager extends \Core\BasePlugin
     {
         return $this->render('overview', [
             'settings_url' => $this->url('settings'),
+            'languages_url' => $this->url('languages'),
             'domains_url' => $this->url('domains'),
             'secrets_url' => $this->url('secrets'),
         ]);
@@ -69,6 +70,68 @@ final class SystemManager extends \Core\BasePlugin
         return $this->renderSettings(
             $this->notice($this->phrase('settings_saved', 'System settings saved.')),
             $values
+        );
+    }
+
+    public function languages(array $instanceParams = []): string
+    {
+        return $this->renderLanguages();
+    }
+
+    public function languagesSave(array $instanceParams = []): string
+    {
+        $request = Request::all();
+        $rawLanguages = $request['active_languages'] ?? [];
+        $rawLanguages = is_array($rawLanguages) ? $rawLanguages : [$rawLanguages];
+
+        $available = array_map(
+            'strval',
+            \DB::getArr('SELECT lang_code FROM languages ORDER BY lang_code')
+        );
+        $availableMap = array_fill_keys($available, true);
+        $active = [];
+
+        foreach ($rawLanguages as $rawLanguage) {
+            $language = trim((string)$rawLanguage);
+            if ($language === '') {
+                continue;
+            }
+            if (!isset($availableMap[$language])) {
+                throw new \InvalidArgumentException("Unknown language {$language}.");
+            }
+            $active[$language] = $language;
+        }
+
+        if ($active === []) {
+            throw new \InvalidArgumentException('At least one system language must remain active.');
+        }
+
+        $usage = $this->domainLanguageUsage();
+        $missingRequired = array_diff(array_keys($usage), array_keys($active));
+        if ($missingRequired !== []) {
+            $language = (string)reset($missingRequired);
+            $domains = implode(', ', $usage[$language] ?? []);
+            throw new \InvalidArgumentException(
+                "Language {$language} is still used by: {$domains}."
+            );
+        }
+
+        $params = array_values($active);
+        $placeholders = implode(', ', array_map(
+            static fn(int $index): string => '$' . ($index + 1),
+            array_keys($params)
+        ));
+
+        $result = \DB::query(
+            "UPDATE languages SET is_active = lang_code IN ({$placeholders})",
+            $params
+        );
+        if ($result === false) {
+            throw new \RuntimeException('Failed to update system languages.');
+        }
+
+        return $this->renderLanguages(
+            $this->notice($this->phrase('languages_saved', 'System languages saved.'))
         );
     }
 
@@ -759,6 +822,77 @@ final class SystemManager extends \Core\BasePlugin
             ];
         }
         return \Core\Translation::sortByTitle($options, 'label', 'system_name');
+    }
+
+    private function renderLanguages(string $notice = ''): string
+    {
+        $usage = $this->domainLanguageUsage();
+        $rows = \DB::query(
+            'SELECT lang_code, lang_name, is_active::int AS is_active
+             FROM languages
+             ORDER BY lang_name'
+        );
+
+        $languageRows = '';
+        while ($row = \DB::fetchRow($rows)) {
+            $code = (string)$row['lang_code'];
+            $domains = $usage[$code] ?? [];
+            $locked = $domains !== [];
+            $active = (int)$row['is_active'] === 1 || $locked;
+            $usageText = $locked ? implode(', ', $domains) : '—';
+
+            $languageRows .= $this->render('language-row', [
+                'language_name' => $this->escape((string)$row['lang_name']),
+                'language_code' => $this->escape($code),
+                'checked' => $active ? ' checked' : '',
+                'disabled' => $locked ? ' disabled' : '',
+                'required_value' => $locked
+                    ? '<input type="hidden" name="active_languages[]" value="' . $this->escape($code) . '">'
+                    : '',
+                'used_by' => $this->escape($usageText),
+            ]);
+        }
+
+        return $this->render('languages', [
+            'language_rows' => $languageRows,
+            'save_url' => $this->url('languagesSave'),
+            'back_url' => $this->url('overview'),
+            'notice' => $notice,
+        ]);
+    }
+
+    /** @return array<string, array<int, string>> */
+    private function domainLanguageUsage(): array
+    {
+        $usage = [];
+        $rows = \DB::query(
+            'SELECT domain_name, domain_config FROM domains ORDER BY domain_name'
+        );
+
+        while ($row = \DB::fetchRow($rows)) {
+            $config = $this->decodeJson($row['domain_config'] ?? null);
+            $languages = is_array($config['languages'] ?? null)
+                ? $config['languages']
+                : [];
+            $defaultLanguage = trim((string)($config['default_language'] ?? ''));
+            if ($defaultLanguage !== '') {
+                $languages[] = $defaultLanguage;
+            }
+
+            foreach (array_unique(array_map('strval', $languages)) as $language) {
+                $language = trim($language);
+                if ($language === '') {
+                    continue;
+                }
+                $usage[$language][(string)$row['domain_name']] = (string)$row['domain_name'];
+            }
+        }
+
+        foreach ($usage as $language => $domains) {
+            $usage[$language] = array_values($domains);
+        }
+
+        return $usage;
     }
 
     private function languageOptions(): array

@@ -22,6 +22,8 @@
             "overview": {"title": "System"},
             "settings": {"title": "System settings"},
             "settingsSave": {"title": "Save system settings"},
+            "languages": {"title": "Languages"},
+            "languagesSave": {"title": "Save languages"},
             "domains": {"title": "Domains"},
             "domainEdit": {"title": "Edit domain"},
             "domainSave": {"title": "Save domain"},

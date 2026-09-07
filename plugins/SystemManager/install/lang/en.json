@@ -8,6 +8,13 @@
     "system_help": "Installation-level settings and site configuration.",
     "system_settings": "System settings",
     "system_settings_help": "Global values used by the Kami installation. Domain-overridable values can be changed for individual sites.",
+    "languages": "Languages",
+    "languages_help": "Choose which languages are available to sites in this Kami installation.",
+    "language": "Language",
+    "code": "Code",
+    "active": "Active",
+    "used_by_domains": "Used by domains",
+    "languages_saved": "System languages saved.",
     "domains": "Domains",
     "domains_help": "Manage sites, their aliases and domain-specific settings.",
     "secrets": "Secrets",
@@ -66,12 +73,12 @@
     "setting_default_language": "Default language",
     "setting_default_language_help": "Primary language used when no language is explicitly selected.",
     "setting_lifecycle_plugins": "Lifecycle plugins",
-    "setting_lifecycle_plugins_help": "Plugins initialized for every page request even when they are not used by a wrapper."
-  },
-  "setting_system_css": "System CSS",
-  "setting_system_css_help": "Stylesheets exposed through the system_css template parameter. One path per item; order is preserved.",
-  "setting_system_js": "System JavaScript",
-  "setting_system_js_help": "JavaScript files exposed through the system_js template parameter. One path per item; order is preserved.",
-  "setting_system_custom_code": "System custom code",
-  "setting_system_custom_code_help": "Trusted raw HTML exposed through the system_custom_code template parameter. Script tags are allowed."
+    "setting_lifecycle_plugins_help": "Plugins initialized for every page request even when they are not used by a wrapper.",
+    "setting_system_css": "System CSS",
+    "setting_system_css_help": "Stylesheets exposed through the system_css template parameter. One path per item; order is preserved.",
+    "setting_system_js": "System JavaScript",
+    "setting_system_js_help": "JavaScript files exposed through the system_js template parameter. One path per item; order is preserved.",
+    "setting_system_custom_code": "System custom code",
+    "setting_system_custom_code_help": "Trusted raw HTML exposed through the system_custom_code template parameter. Script tags are allowed."
+  }
 }
